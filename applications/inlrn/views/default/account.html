@@ -1,0 +1,130 @@
+{{extend 'layout.html'}}
+<style>
+
+#contentwrapper{
+    
+	width: 100%;
+	
+}    
+      
+
+#content { 
+
+        margin-left:250px;
+            
+}
+
+#left {
+    
+    float: left;
+    width:200px;
+	border-right:1px solid rgb(238,238,238);
+	border-bottom:1px solid rgb(238,238,238);
+	padding-left:15px;
+	padding-bottom:15px;    
+}
+</style>
+
+<div id="left">
+	<h4><a href="/account/academies/">academies</a></h4>
+    <h4><a href="/account/content/">content</a></h4>
+	<h4><a href="/account/courses/">courses</a></h4>
+    <h4><a href="/account/general/">general info</a></h4>
+	<h4><a href="/account/promotions/">promotions</a></h4>
+	<h4><a href="/account/settings/">settings</a></h4>
+
+</div>
+
+<div id="contentwrapper">
+    <div id="content">
+        <h1>Account</h1>
+        <p class="lead">username - change this yo</p><hr>
+        
+        
+        {{if request.args(0) == 'general':}}
+
+			<h4><a>avatar</a></h4>
+			<h4><a>email</a></h4>
+
+		{{pass}}
+        
+        {{if request.args(0) == 'settings':}}
+
+            {{if request.args(1) == 'notifications':}}
+    
+                settings - privacy
+    
+            {{elif request.args(1) == 'privacy':}}
+    
+                settings - privacy
+    
+            
+			{{elif request.args(1) == 'accounts':}}
+
+                <h4><a>connected accounts</a></h4>
+
+            {{else:}}
+                <h4><a>connected accounts</a></h4>
+                facebook<br>
+                
+                twitter<br>
+                linkedin<br>
+                paypal<br>
+                lealr<br>
+                voetr<br>
+                givingfor<br>
+                conex.us<br>
+                epoint.me<br>
+                deliveryfor<br>
+                hospitalityfor<br>
+                bankingfor<br>
+                
+					see connected friends...invite friends
+
+                <h4><a>notification settings</a></h4>
+                <h4><a>privacy settings</a></h4>
+                	publish everything i do to the transpareny page<br>
+                	history, dont track history.<br>
+				<h4><a>promotion settings</a></h4>
+				show ads or not (we like ads. look at the transparency page)
+				(donate? ..NO)
+				ok.
+				
+
+                <h4><a>profile settings</a></h4>
+                lol idk
+                <h4><a>show hints</a></h4>
+
+                
+                
+        	{{pass}}
+		{{pass}}
+		{{if request.args(0) == 'content':}}
+
+        	collections, comments, threads, tags, likes, dislikes
+			
+		{{pass}}
+		
+		{{if request.args(0) == 'promotions':}}
+
+        <h4>Promote</h4>
+            
+            promote thread
+            options?
+            create thread.. upload video/ picutre template... auto play options etc..
+            threads
+            comments
+            promotions
+			
+		{{pass}}
+
+    </div>
+</div>
+
+
+
+{{if request.args(0) == 'logout':}}
+	{{=auth.logout()}}
+{{pass}}
+
+<br><br><br><br><br><br>

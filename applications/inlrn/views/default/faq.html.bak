@@ -1,0 +1,7 @@
+{{extend 'layout.html'}}
+<h1>frequently asked questions</h1><hr>
+<a>what is inlrn</a><br>
+<a>what is voetr</a><br>
+<a>what is a crowdowned company</a><br>
+<a>what is givingfor</a><br>
+<a>what is givingfor</a><br>

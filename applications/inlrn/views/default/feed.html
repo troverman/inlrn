@@ -1,0 +1,97 @@
+{{extend 'layout.html'}}
+<style>
+
+#contentwrapper{
+	width: 100%;
+}    
+            
+#content { 
+
+
+    
+}
+#right { 
+
+        float: right;
+        width: 255px;
+    	border-left:1px solid rgb(238,238,238);
+		border-bottom:1px solid rgb(238,238,238);
+        padding-left:15px;
+		padding-right:15px;
+		padding-bottom:15px;
+
+}
+#left {
+    
+	float: left;
+	width: 175px;
+	border-right:1px solid rgb(238,238,238);
+	border-bottom:1px solid rgb(238,238,238);
+	padding-left:15px;
+	padding-bottom:15px;
+
+    
+}
+
+
+</style>
+<script>
+$(document).ready(function() {
+
+    $("#close-ad").click(function() {		
+        $("#ad_block").fadeToggle();	
+		$("#right").fadeToggle();		
+	
+    });
+
+});
+
+</script>
+<div id="left">
+    
+        
+	filters<hr>
+  	<h5>academies</h5>
+	<h5>courses</h5>
+	<h5>following</h5>
+	<h5>members</h5>
+   	<h5>tags</h5>
+   	<h5>watched</h5>
+
+show only
+
+   	<h5>posts</h5>
+	<h5>threads</h5>
+
+
+
+</div>
+    
+<div id="right">
+	
+	<div style="border:1px solid rgb(235,235,235);background-color:rgb(246,250,255);padding:15px;" id="ad_block">
+    	<a class="close" id="close-ad" href="#">&times;</a>
+        <div id="promoted_list">
+            {{for thread in range(5):}}
+            	<a href="/thread/{{=thread}}"><h5>{{=thread}}</h5></a>
+            {{pass}}          
+        </div>
+    </div>
+    
+</div>
+
+<div id="contentwrapper">
+
+    <div id="content">
+        <div style="margin-left:15px;float:left;">
+            	<h1>Feed</h1>
+        	</div>
+            <br><br>
+            <hr> 
+            <h4>friend posted a <a>thread</a></h4>
+            {{for x in range(50):}}
+            	<a><h5>{{=x}}</h5></a> 
+            {{pass}} 
+    </div>
+    
+</div>

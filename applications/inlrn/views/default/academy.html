@@ -1,0 +1,56 @@
+{{extend 'layout.html'}}
+<style>
+    
+    #contentwrapper{width: 100%;}               
+    #content {}
+    #right { 
+        float: right;
+        width: 255px;
+        border-left:1px solid rgb(238,238,238);
+        border-bottom:1px solid rgb(238,238,238);
+        padding-left:15px;
+        padding-right:15px;
+        padding-bottom:15px;
+    }
+    #left {
+        float: left;
+        width: 175px;
+        border-right:1px solid rgb(238,238,238);
+        border-bottom:1px solid rgb(238,238,238);
+        padding-left:15px;
+        padding-bottom:15px;
+    }
+     
+</style>
+<div id="left">
+    left
+</div>
+<div id="right">
+    <button class="btn">+ new course</button>
+	<button class="btn">+ new thread</button>
+</div>
+<div id="contentwrapper">
+    <div id="content">
+      
+        <h1>{{=academy_from_url[0]['title']}}</h1><hr>
+        <p class="lead">{{=academy_from_url[0]['description']}}</p>
+        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/members">members</a></p>
+        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/moderation">moderation</a></p>
+        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/pages">pages</a></p>
+        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/settings">settings</a></p>
+        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/styles">styles</a></p>
+        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/permissions">user groups</a></p>
+
+
+        <h3>courses</h3><hr>
+        {{for course in academy_courses:}}
+            <a href="/course/{{=course['url_title']}}">{{=course['title']}}</a><br>
+        {{pass}}
+        <h3>threads</h3><hr>
+        {{for thread in academy_courses:}}
+            <a href="/course/{{=thread['url_title']}}">{{=thread['title']}}</a><br>
+        {{pass}}
+        <br><br>
+
+    </div>
+</div>

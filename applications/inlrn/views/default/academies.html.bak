@@ -1,0 +1,60 @@
+{{extend 'layout.html'}}
+<style>
+    
+    #contentwrapper{
+        
+            //float: left;
+            width: 100%;
+            
+    }    
+                
+    #content { 
+    
+            //margin: 0 280px 0 180px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+             
+    }
+    
+    #right { 
+    
+            float: right;
+            width: 255px;
+            border-left:1px solid rgb(238,238,238);
+            border-bottom:1px solid rgb(238,238,238);
+            padding-left:15px;
+            padding-right:15px;
+            padding-bottom:15px;
+    
+     
+    }
+    
+    #left {
+        
+            float: left;
+            width: 175px;
+            border-right:1px solid rgb(238,238,238);
+            border-bottom:1px solid rgb(238,238,238);
+            padding-left:15px;
+            padding-bottom:15px;
+    
+        
+    }
+     
+</style>
+<div id="left">
+    left
+</div>
+<div id="right">
+	<button class="btn">+ new academy</button><br>
+    <button class="btn">+ new course</button><br>
+	<button class="btn">+ new thread</button><br>
+</div>
+<div id="contentwrapper">
+    <div id="content">
+      
+        <h1>academies</h1><hr><br>
+        {{for x in range(100):}}
+        	<h4><a href="{{=x}}">hi {{=x}}</a></h4>
+        {{pass}}
+          
+    </div>
+</div>

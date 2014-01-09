@@ -1,0 +1,5 @@
+{{extend 'layout.html'}}
+<h1>courses</h1><hr>
+{{for x in range(30):}}
+	<h4>{{=x}}</h4>
+{{pass}}

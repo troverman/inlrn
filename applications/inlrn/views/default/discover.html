@@ -1,0 +1,102 @@
+{{extend 'layout.html'}}
+
+<style>
+    
+#content { 
+
+	margin-left:15px;
+	margin-right:15px;
+    
+}
+
+#right {
+    
+    width: 20%; 
+    float: right;
+    border-left:1px solid rgb(238,238,238);
+	border-bottom:1px solid rgb(238,238,238);
+	margin-right:15px;
+    
+}
+
+</style>
+
+<script>
+function onAddTag_collcetion(tag) {
+
+	ajax('ajax_add_tag_collection', ['collection_add_tag_form'], ':eval');
+
+}
+
+function onAddTag_sidebar(tag) {
+
+	plus_or_minus(tag);
+
+}
+
+$(document).ready(function() {
+
+	$('#sidebar_add_tag_form').tagsInput({
+        	
+         onAddTag:onAddTag_sidebar,
+         onRemoveTag:onAddTag_sidebar,
+       
+        'defaultText':'interests',
+        'width':'auto',
+        'height':'auto'
+        	
+    });  
+	$("#close-ad-sidebar").click(function() {		
+		$("#ad_block_sidebar").fadeToggle();		
+	});
+	$("#close-ad").click(function() {		
+		$("#ad_block").fadeToggle();		
+	});
+});
+
+
+</script>
+<div class="centered-width">
+    <div id="right">
+    	<div style="border:1px solid rgb(235,235,235);background-color:rgb(246,250,255);padding:15px;" id="ad_block_sidebar">
+        	<a class="close" id="close-ad-sidebar" href="#">&times;</a>
+            <div id="promoted_list">
+                {{for thread in range(5):}}
+                <a href="/thread/{{=thread}}"><h5>{{=thread}}</h5></a>
+                {{pass}}          
+            </div>
+        </div>
+
+    </div>
+
+    <div id="content">
+    	<h1>Discover</h1><hr>
+    	discover content
+    	<div style="margin-right:16px;" id="div_sidebar_add_tag"><input name = "sidebar_add_tag" type="text" id="sidebar_add_tag_form" /></div><br>   
+    	<div class="well">
+            related collections...tags...users..posts... etc
+            {{for x in range(5):}}
+                <h5>related {{=x}}</h5>
+            {{pass}}   
+        </div>
+        
+        <button class="btn">discover</button>
+        
+        <br><hr>
+        
+    	<div style="border:1px solid rgb(235,235,235);background-color:rgb(246,250,255);padding:15px;" id="ad_block">
+        	<a class="close" id="close-ad" href="#">&times;</a>
+            <div id="promoted_list">
+                {{for thread in range(5):}}
+                <a href="/thread/{{=thread}}"><h5>{{=thread}}</h5></a>
+                {{pass}}          
+            </div>
+        <br></div>
+        
+        {{for x in range(50):}}
+        <a><h4>thread {{=x}}</h4></a>
+        {{pass}}
+        
+    </div>
+</div>
+<br>

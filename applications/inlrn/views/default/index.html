@@ -1,0 +1,82 @@
+{{extend 'layout.html'}}
+
+<style type="text/css">
+	#another-div{margin-left:3%;margin-right:3%;}
+	#another-div-container{border-top:3px solid rgb(210,210,210);border-bottom:3px solid rgb(210,210,210);}
+	#discover-div{margin-left:3%;margin-right:3%;}
+	#discover-div-container{border-top:3px solid rgb(210,210,210);border-bottom:3px solid rgb(210,210,210);}
+</style>
+
+<br>
+<div class="centered-width">
+	<h1>the internet is learning</h1><hr>
+	<p class="lead">what does that mean?</p>
+	<p class="lead">it means that with the internet, the ability the learn, create, and spead knowledge is becoming much easier.</p>
+	<p class="lead">anyone can become a teacher, anyone can choose to learn, and anyone can take advantage of this collaborative nature</p>
+	<p class="lead">this also means that evolution is possible, and that anyone can contribute back. it's time for a change in the way we look at business models.</p>
+	<p class="lead">inlrn is a <a>crowd owned</a>, <a>opensource</a>, <a>transparent</a>, <a>givingfor supported</a>, <a>voetr enabled</a> learning platform.</p>
+	<p>PICTURE</p>
+
+</div>
+<div id="discover-div-container">
+	<div id="discover-div">
+		<p>internet stuff</p>
+		<p>internet stuff</p>
+		<p>live feed classes, in person classes, on your own time classes</p>
+		<p>PICTURE</p>
+		<p class="btn">discover <i class="fa fa-random"></i></p>
+	</div>
+</div>
+
+
+<div class="centered-width">
+	<table>
+		<tr>
+			{{for x in range(5):}}
+				<td><a><h3>trending academy {{=x}}</h3></a></td>
+			{{pass}}
+		</tr>
+		<tr>
+			{{for x in range(5):}}
+				<td><a><h3>trending course {{=x}}</h3></a></td>
+			{{pass}}
+		</tr>
+		<tr>
+			{{for x in range(5):}}
+				<td><a><h3>trending thread {{=x}}</h3></a></td>
+			{{pass}}
+		</tr>
+	</table>
+	<h3><a href="/feed/">feed</a></h3>
+
+	<div class="well">
+	    <h3>hello</h3>
+	</div>
+	<p class="lead">random stuff!</p>
+	<p class="lead">random stuff!</p>
+	<p class="lead"><a href="/stats/">stats</a></p>
+	<p class="lead">random stuff!</p>
+	<p class="lead">random stuff!</p>
+	<p class="lead">random stuff!</p>
+
+</div>
+<div id="another-div-container">
+	<div id="another-div">
+		<p class="lead">random stuff!</p>
+		<p class="lead">random stuff!</p>
+		<p class="lead">random stuff!</p>
+		<p class="lead">random stuff!</p>
+		<p class="lead">random stuff!</p>
+	</div>
+</div>
+<div class="centered-width">
+	<div style="float:right;">
+	    <h1>get the app</h1>
+	    <a href=""><img class="opacity-img" style="height:48px;" src="/inlrn/static/images/app_store_icon.png" /></a>
+	    <a href=""><img class="opacity-img" style="height:48px;" src="/inlrn/static/images/android_marketplace_icon.png" /></a>
+	</div>
+	<h1>share</h1>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+<h1>members</h1><hr>
+<div id="member-list">
+    {{member_list=[1,2,3,4,5]}}
+    {{for member in member_list:}}
+    	<div id="{{=member}}">
+    		<h3>member {{=member}}</h3>
+    	</div>
+    {{pass}}
+</div>
