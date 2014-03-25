@@ -4,7 +4,7 @@
 #  and http://web2py.com/book/default/chapter/11?search=app.yaml
 
 application: troverman-inlrn
-version: 1
+version: 3
 api_version: 1
 
 runtime: python27

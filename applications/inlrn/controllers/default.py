@@ -110,8 +110,13 @@ def inbox():
 ####index#######################
 ################################        
 def index():
+
+    import random
+    academy_list = db(db.academy).select().as_list() 
+    random.shuffle(academy_list)
+    academy_list = academy_list[0:5]
    
-    return dict()
+    return dict(academy_list=academy_list)
 
 ################################
 ####mission#####################
