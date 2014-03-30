@@ -40,13 +40,62 @@
     }
      
 </style>
+
+<script>
+academies=[
+{{for a in academy_list:}}
+    '{{=a['title']}}'
+    ,
+{{pass}}
+]
+</script>
+
 <div class="centered-width">
     <div id="left">
         left
     </div>
     <div id="right">
-        <button class="btn">+ new course</button><br>
+        <button class="btn" data-toggle="modal" data-target="#newCourse">+ new course</button><br>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newCourse" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">New Course</h4>
+          </div>
+          <div class="modal-body" style='height:500px'>
+
+            <div class='result'></div>
+            <label>Course Name</label>
+            <input class='c_name' type='text' name='title' placeholder='Enter the Course Name'/>
+            <label>Course Url Id</label>
+            <input class='c_id' type='text' name='url_title' placeholder='Enter the Unique Course Url'/>
+            <label>Academy</label>
+            <input class='academy' type='text' placeholder='Enter the Academy'/>
+            <label>Course Description</label>
+            <textarea placeholder='Enter the Course Description' name='description'></textarea>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+$(".academy").autocomplete({source:academies, appendTo:'.modal-body'});
+$(".modal-footer .btn").click(function(){
+    ajax('{{=URL('courses_post')}}', ['academy_id_array','url_title','title','description'],'.result')
+    location.reload();
+})
+</script>
+
+
     <div id="contentwrapper">
         <div id="content">
           
