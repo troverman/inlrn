@@ -26,10 +26,11 @@
 		<h1>the internet is learning</h1><hr>
     </div>
 </div>
+<br>
 <div class="centered-width">
 	<p class="lead">what does that mean?</p>
 	<p class="lead">it means that with the internet, the ability the learn, create, and spead knowledge is becoming much easier.</p>
-	<p class="lead">anyone can become a teacher, anyone can choose to learn, and anyone can take advantage of this collaborative nature</p>
+	<p class="lead">anyone can become a teacher, anyone can choose to learn, and anyone can take advantage of this collaborative nature.</p>
 	<p class="lead">this also means that evolution is possible, and that anyone can contribute back. it's time for a change in the way we look at business models.</p>
 	<p class="lead">inlrn is a <a>crowd owned</a>, <a>opensource</a>, <a>transparent</a>, <a>givingfor supported</a>, <a>voetr enabled</a> learning platform.</p>
 	<p class="lead">get <a>paid</a>? education is valuable.</p>
@@ -39,11 +40,14 @@
 </div>
 <div id="discover-div-container">
 	<div id="discover-div">
-		<p>internet stuff</p>
-		<p>internet stuff</p>
+		<br>
+		<p>there are different types of classes</p>
+		<p>earn certificates</p>
 		<p>live feed classes, in person classes, on your own time classes</p>
 		<p>PICTURE</p>
 		<p class="btn">discover <i class="fa fa-random"></i></p>
+		<br>
+		<br>
 	</div>
 </div>
 
@@ -56,36 +60,34 @@
 			{{pass}}
 		</tr>
 		<tr>
-			{{for x in range(5):}}
-				<td><a><h3>trending course {{=x}}</h3></a></td>
+			{{for course in course_list:}}
+				<td><h3><a href="/course/{{=course['url_title']}}/">{{=course['title']}}</a></h3></td>
 			{{pass}}
 		</tr>
 		<tr>
-			{{for x in range(5):}}
-				<td><a><h3>trending thread {{=x}}</h3></a></td>
+			{{for thread in thread_list:}}
+				<td><h3><a href="/thread/{{=thread['title']}}/">{{=thread['title']}}</a></h3></td>
 			{{pass}}
 		</tr>
 	</table>
-	<h3><a href="/feed/">feed</a></h3>
 
 	<div class="well">
-	    <h3>hello</h3>
+		<h3><a href="/feed/">feed</a></h3>
 	</div>
-	<p class="lead">random stuff!</p>
-	<p class="lead">random stuff!</p>
+	<p class="lead">transparency</p>
 	<p class="lead"><a href="/stats/">stats</a></p>
-	<p class="lead">random stuff!</p>
-	<p class="lead">random stuff!</p>
-	<p class="lead">random stuff!</p>
+	<p class="lead">why do I go into debt to learn? that's backwards.</p>
+	<p class="lead">valuating education, really.</p>
+	<p class="lead">nonprofit</p>
 
 </div>
 <div id="another-div-container">
 	<div id="another-div">
-		<p class="lead">random stuff!</p>
-		<p class="lead">random stuff!</p>
-		<p class="lead">random stuff!</p>
-		<p class="lead">random stuff!</p>
-		<p class="lead">random stuff!</p>
+		<p class="lead">transparency is key</p>
+		<p class="lead">teach a class, get paid</p>
+		<p class="lead">take a class, get paid</p>
+		<p class="lead">anyone can join or create an academy</p>
+		<p class="lead">anyone can join or create a course</p>
 	</div>
 </div>
 <div id="share-footer">

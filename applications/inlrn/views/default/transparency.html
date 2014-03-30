@@ -1,6 +1,67 @@
 {{extend 'layout.html'}}
-<h1>transparency</h1><hr>
-<p class="lead">inlrn is completly transparent</p>
-<p class="lead">crowd owned, transparent, opensource</p>
-<p class="lead">financials</p>
-<p class="lead">inlrn is completly transparent</p>
+<style>
+	#index-header{
+	    background-color:rgb(247,247,247);
+	    border-bottom:1px solid rgb(225, 225, 225);
+	    padding-top:15px;
+	    padding-bottom:15px;
+	}
+	#index-header-container{
+	    margin-left:5%;
+	    margin-right:5%;
+	}
+	#share-footer{
+    	background-color:rgb(247,247,247);
+    	border-top:1px solid rgb(225, 225, 225);
+	}
+	#share-footer-container{margin-left:5%;margin-right:5%;}
+</style>
+<div id="index-header">
+    <div id="index-header-container">
+		<h1>transparency</h1><hr>
+    </div>
+</div>
+<div class="centered-width">
+	<p class="lead">inlrn is completly transparent</p>
+	<p class="lead">crowd owned, transparent, opensource</p>
+	<p class="lead">financials</p>
+	<p class="lead">inlrn is completly transparent</p>
+
+
+	<br><br><br>
+    <h2>revenue</h2><hr>
+    <h4>donations</h4>
+    <h4>ad removal</h4>
+
+    <br><br>
+    <h2>costs</h2><hr>
+    <h2>webhosting</h2>
+    <h4>google app engine</h4>
+    <h2>advertisement</h2>
+    <h4>google ads</h4>
+    <h4>facebook ads</h4>
+    <h4>shirts</h4>
+    <h4>stickers</h4>
+    <h2>employment</h2>
+    <h4>salary</h4>
+
+    
+    
+    graph of costs<hr>
+
+
+
+
+<br>
+<br>
+	{{for academy in academy_list:}}
+		<a>{{=academy['title']}}</a><br>
+	{{pass}}
+
+	{{for course in course_list:}}
+		<a>{{=course['title']}}</a><br>
+	{{pass}}
+
+</div>
+
+<br><br><br><br>

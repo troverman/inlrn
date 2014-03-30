@@ -29,26 +29,90 @@
         padding-bottom:15px;
     }
      
+    #index-header{
+        background-color:rgb(247,247,247);
+        border-bottom:1px solid rgb(225, 225, 225);
+        padding-top:15px;
+        padding-bottom:15px;
+    }
+    #index-header-container{
+        margin-left:5%;
+        margin-right:5%;
+    }
+    #share-footer{
+        background-color:rgb(247,247,247);
+        border-top:1px solid rgb(225, 225, 225);
+    }
+    #share-footer-container{margin-left:5%;margin-right:5%;}
 </style>
+<div id="index-header">
+    <div id="index-header-container">
+        <h1>academies</h1>
+    </div>
+</div><br>
 <div class="centered-width">
     <div id="left">
-        left
+        {{for tag in academy_tag_list:}}
+            <a>{{=tag['tag']}}</a><br>
+        {{pass}}
     </div>
     <div id="right">
-    	<button class="btn">+ new academy</button><br>
+        <button class="btn" data-toggle="modal" data-target="#newAcademy">+ new academy</button><br>
+        {{for x in range(20):}}
+            <p class="lead">promoted post</p>
+        {{pass}}
     </div>
     <div id="contentwrapper">
         <div id="content">
-          
-            <h1>academies</h1><hr><br>
+            <a>sort via trending, member count</a>
             {{for academy in academy_list:}}
             	<h3><a href="/academy/{{=academy['url_title']}}/">{{=academy['title']}}</a></h3>
                 {{=academy['description']}}
             {{pass}}
               
         </div>
+        <div style="clear:both;"></div>
     </div>
 </div>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="newAcademy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">New Academy</h4>
+          </div>
+          <div class="modal-body" style='height:500px'>
+
+            <div class='result'></div>
+
+            <label>Academy Name</label>
+            <input class='a_name' type='text' name='title' placeholder='Enter the Academy Name'/>
+            <label>Academy Url name</label>
+            <input class='a_url' type='text' name='url_title' placeholder='Enter the Unique Academy Url'/>
+            <label>Academy Description</label>
+            <textarea name='description' placeholder='Enter the Academy Description'></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id='add-button' class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+$("#add-button").click(function(){
+    ajax('{{=URL('academies_post')}}', ['title','url_title','description'],'.result')
+    location.reload();
+})
+</script>
+
+
 
 <br>
 <br>

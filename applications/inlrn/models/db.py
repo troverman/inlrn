@@ -62,11 +62,44 @@ db.define_table('academy',
 
 )
 
+
+################################
+####assignment##################
+################################  
+db.define_table('assignment',
+    Field('course_id','string', readable=False, writable=False),
+    Field('title','string'),
+    Field('description','text'),
+)
+
+################################
+####assignment_question#########
+################################  
+db.define_table('assignment_question',
+    Field('assignment_id','string'),
+    Field('title','string'),
+    Field('question_type','string'),
+    Field('question_choices','list:string'),
+    Field('question_answer','list:string'),
+    Field('description','text'),
+)
+
+################################
+####course_member###############
+################################  
+import datetime
+db.define_table('course_member',
+    Field('auth_user_id','string'),
+    Field('course_id','string'),
+    Field('member_type','string'),
+    Field('join_time','datetime', default=datetime.datetime.utcnow()),
+)
+
 ################################
 ####academy_tag#################
 ################################ 
 db.define_table('academy_tag',
-    Field('academy_id','integer'),
+    Field('academy_id','string'),
     Field('tag','string'),
 )
 
@@ -75,17 +108,27 @@ db.define_table('academy_tag',
 ################################ 
 db.define_table('course',
     Field('academy_id_array','list:integer'),
+    Field('auth_user_id','string'),
     Field('url_title','string'),
     Field('title','string'),
-    Field('description','string')
+    Field('description','text')
 )
 
 ################################
 ####course_tag##################
 ################################ 
 db.define_table('course_tag',
-    Field('academy_id','integer'),
+    Field('course_id','string'),
     Field('tag','string'),
+)
+
+################################
+####course_page#################
+################################ 
+db.define_table('course_page',
+    Field('course_id','string', readable=False, writable=False),
+    Field('title','string'),
+    Field('page_content','text'),
 )
 
 ################################

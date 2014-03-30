@@ -23,26 +23,36 @@
      
 </style>
 <div id="left">
-    left
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/certificates/">certificates</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/members/">members</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/moderation/">moderation</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/pages/">pages</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/settings/">settings</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/styles/">styles</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/transparency/">transparency</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/permissions/">user groups</a></p>
 </div>
 <div id="right">
-    <button class="btn">+ new course</button>
-	<button class="btn">+ new thread</button>
+    <button class="btn">+ new course</button><br>
+	<button class="btn">+ new thread</button><br>
+    <div id="donate">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ZWUTDEF3ECGRY">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        donation bar<br>
+        givingfor<br>
+        donation<br>
+
+    </div>
 </div>
 <div id="contentwrapper">
-    <div id="content">
+    <div id="content" style="margin-left:5%;margin-right:5%;">
       
         <h1>{{=academy_from_url[0]['title']}}</h1><hr>
-
-
         <p class="lead">{{=academy_from_url[0]['description']}}</p>
-        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/members">members</a></p>
-        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/moderation">moderation</a></p>
-        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/pages">pages</a></p>
-        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/settings">settings</a></p>
-        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/styles">styles</a></p>
-        <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/permissions">user groups</a></p>
-
 
         <h3>courses</h3><hr>
         {{for course in academy_courses:}}
@@ -56,3 +66,6 @@
 
     </div>
 </div>
+
+
+
