@@ -35,8 +35,42 @@
         left
     </div>
     <div id="right">
-    	<button class="btn">+ new academy</button><br>
+    	<button class="btn" data-toggle="modal" data-target="#newAcademy">+ new academy</button><br>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newAcademy" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">New Academy</h4>
+          </div>
+          <div class="modal-body" style='height:500px'>
+
+            <div class='result'></div>
+
+            <label>Academy Name</label>
+            <input class='a_name' type='text' name='title' placeholder='Enter the Academy Name'/>
+            <label>Academy Url name</label>
+            <input class='a_url' type='text' name='url_title' placeholder='Enter the Unique Academy Url'/>
+            <label>Academy Description</label>
+            <textarea name='description' placeholder='Enter the Academy Description'></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" id='add-button' class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<script>
+$("#add-button").click(function(){
+    ajax('{{=URL('academies_post')}}', ['title','url_title','description'],'.result')
+    location.reload();
+})
+</script>
     <div id="contentwrapper">
         <div id="content">
           
