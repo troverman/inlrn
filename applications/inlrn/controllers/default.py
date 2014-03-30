@@ -38,12 +38,26 @@ def academy():
 def academies():
 
     academy_list = db(db.academy).select()
+<<<<<<< HEAD
     academy_tag_list = db(db.academy_tag).select()
    
     return dict(
         academy_list=academy_list,
         academy_tag_list=academy_tag_list,
     )
+=======
+    form = SQLFORM(db.academy)
+    if form.process().accepted:
+        response.flash='record inserted'
+    return dict(academy_list=academy_list, form = form)
+
+def academies_post():
+    form=SQLFORM(db.academy)
+    if form.accepts(request, formname=None):
+        return DIV("Message posted")
+    elif form.errors:
+        return TABLE(*[TR(k, v) for k, v in form.errors.items()])
+>>>>>>> FETCH_HEAD
 
 ################################
 ####account#####################
@@ -127,6 +141,7 @@ def course():
 def courses():
 
     course_list = db(db.course).select()
+<<<<<<< HEAD
     course_tag_list = db(db.course_tag).select()
     academy_list = db(db.academy).select().as_list() 
 
@@ -135,6 +150,23 @@ def courses():
         course_list=course_list,
         course_tag_list=course_tag_list,
     )            
+=======
+    academy_list=db(db.academy).select()
+
+    form = SQLFORM(db.course)
+    if form.process().accepted:
+        response.flash='record inserted'
+
+    return dict(course_list=course_list, academy_list=academy_list, form=form)            
+
+def courses_post():
+    form=SQLFORM(db.course)
+    if form.accepts(request, formname=None):
+        return DIV("Message posted")
+    elif form.errors:
+        return TABLE(*[TR(k, v) for k, v in form.errors.items()])
+     
+>>>>>>> FETCH_HEAD
 
 ################################
 ####discover####################
@@ -205,7 +237,11 @@ def member():
         id_from_url = db(db.auth_user.username == request.args(0)).select()[0]['id']
         #courses_distributed = db(db.auth_user.id == db.course.creator_id).select()
         #courses_distributed_num = len(courses_distributed)
+<<<<<<< HEAD
         courses = db(db.course_member.auth_user_id == id_from_url).select()
+=======
+        courses = db(db.course_member.auth_user_id == id_from_url).select(join=db.course.on(db.course.id==db.course_member.course_id), orderby=db.course_member.join_time)
+>>>>>>> FETCH_HEAD
         
     except IndexError:
         redirect(URL('members'))

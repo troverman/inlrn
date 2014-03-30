@@ -189,7 +189,19 @@ NONE
 
                     {{for course in courses:}}
                     <li>
+<<<<<<< HEAD
                         {{=course}}
+=======
+                    {{="He has "}}
+                    {{if course['course_member.member_type'] == '1':}}
+                    <span class="course_create">{{="created"}} </span>
+                    {{else:}}
+                    <span class="course_follow"> {{="followed"}} </span>
+                    {{pass}} 
+                    course
+                    <span class="course_title"> {{=course['course.title']}} </span>
+                    </li>
+>>>>>>> FETCH_HEAD
                     {{pass}}
                 </ul>
             

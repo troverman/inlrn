@@ -1,0 +1,385 @@
+(dp1
+S'output'
+p2
+S'missing "pass" in view'
+p3
+sS'layer'
+p4
+S'ParserContainer'
+p5
+sS'code'
+p6
+S'response.write(\'<!-- html ================================================== -->\\n<!DOCTYPE html>\\n<!--[if IE 8]><html class="ie ie8 ie-lte9 ie-lte8 no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <![endif]-->\\n<!--[if IE 9]><html class="ie9 ie-lte9 no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <![endif]-->\\n<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <!--<![endif]-->\\n<!-- head ================================================== -->\\n<head>\\n  <!-- title ================================================== -->\\n  <title>\', escape=False)\nresponse.write(response.title)\nresponse.write(\'</title>\\n  <!--/title -->\\n\\n  <!--[if !HTML5]><meta http-equiv="X-UA-Compatible" content="IE=edge\', escape=False)\nresponse.write(not request.is_local and \',chrome=1\' or \'\')\nresponse.write(\'"><![endif]-->\\n\\n  <!-- meta ================================================== -->   \\n  <meta charset="utf-8" />\\n  <!-- http://dev.w3.org/html5/markup/meta.name.html -->\\n  <meta name="application-name" content="\', escape=False)\nresponse.write(request.application)\nresponse.write(\'" />\\n  <!-- set site up: http://google.com/webmasters -->\\n  <meta name="google-site-verification" content="" />\\n  <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable = yes"  />\\n  <!--/meta -->\\n\\n  <!-- icons ================================================== -->\\n  <link rel="shortcut icon" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/favicon.ico\'))\nresponse.write(\'" type="image/x-icon">\\n  <link rel="apple-touch-icon" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/favicon.png\'))\nresponse.write(\'">\\n  <!--/icons -->\\n\\n  <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/modernizr.custom.js\'))\nresponse.write(\'"></script>\\n  \', escape=False)\nresponse.write(\'<script type="text/javascript"><!--\\n    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).\\n    var w2p_ajax_confirm_message = "\', escape=False)\nresponse.write(T(\'Are you sure you want to delete this object?\'))\nresponse.write(\'";\\n    var w2p_ajax_date_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d\'))\nresponse.write(\'";\\n    var w2p_ajax_datetime_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d %H:%M:%S\'))\nresponse.write(\'";\\n    var ajax_error_500 = \\\'\', escape=False)\nresponse.write(XML(T(\'An error occured, please %s the page\') % A(T(\'reload\'), _href=URL(args=request.args, vars=request.get_vars))))\nresponse.write("\'\\n    //--></script>\\n", escape=False)\nresponse.files.insert(0,URL(\'static\',\'js/jquery.js\'))\nresponse.files.insert(1,URL(\'static\',\'css/calendar.css\'))\nresponse.files.insert(2,URL(\'static\',\'js/calendar.js\'))\nresponse.files.insert(3,URL(\'static\',\'js/web2py.js\'))\nresponse.include_meta()\nresponse.include_files()\nresponse.write(\'\\n\', escape=False)\nresponse.write(\'\\n\\n  <!-- stylesheets ================================================== -->\\n  <link rel="stylesheet" href="/inlrn/static/css/web2py.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/bootstrap.min.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/bootstrap-responsive.min.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/web2py_bootstrap.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/font-awesome.css">\\n  <!--/stylesheets -->\\n\\n  <!-- inline-styles ================================================== -->\\n  <style type="text/css">\\n    html, body {\\n      height: 100%;\\n    }\\n    .centered-width{\\n      margin-left:6%;\\n      margin-right:6%;\\n    }\\n    .container{\\n      width:100%;\\n      min-height: 100%;\\n      height: auto !important;\\n      height: 100%;\\n      margin: 0 auto -56px;\\n    }\\n    .footer{\\n      height:28px;\\n      padding-left:5%;\\n      padding-right:5%;\\n      padding-bottom:10px;   \\n    }\\n    .modal.fade {\\n      top: 7%;\\n      -webkit-transition: opacity 0.3s linear;\\n      -moz-transition: opacity 0.3s linear;\\n      -o-transition: opacity 0.3s linear;\\n      transition: opacity 0.3s linear;\\n    }\\n    .modal.fade.in {top: 7%;}       \\n    .navbar .btn-navbar {display:none;}\\n    a{color:rgb(71,122,173);}\\n    a:hover{text-decoration: none;color:rgb(51,102,153);}\\n    img.opacity-img{opacity:0.8;}\\n    img.opacity-img:hover{opacity:1;}\\n    #angle-down-icon{color:rgb(211,221,241);margin-left:5px;}\\n    #angle-down-icon:hover{color:rgb(255,255,255);}\\n    #academies-icon{color:rgb(211,221,241);}\\n    #academies-icon:hover{color:rgb(255,255,255);}\\n    #courses-icon{color:rgb(211,221,241);}\\n    #courses-icon:hover{color:rgb(255,255,255);}\\n    #discover-icon{color:rgb(211,221,241);}\\n    #discover-icon:hover{color:rgb(255,255,255);}\\n    #facebook-login:hover{opacity:.9;}\\n    #feed-icon{color:rgb(211,221,241);}\\n    #feed-icon:hover{color:rgb(255,255,255);}\\n    #footer-links{font-family:ubuntu;color:rgb(201,211,231);margin-top:-15px;}\\n    #google-login:hover{opacity:.9;}\\n    #inbox-icon{color:rgb(211,221,241);}\\n    #inbox-icon:hover{color:rgb(255,255,255);}\\n    #login-area{\\n      font-size:14px;\\n      font-family:ubuntu;\\n      color:rgb(235,235,235);\\n    }\\n    #login-area:hover{color:rgb(255,255,255)}\\n    #logo-inlrn{\\n      float:left;\\n      height:50px;\\n      padding-top:2px;\\n      padding-right:10px;\\n      padding-bottom:13px;\\n    }\\n    #logo-inlrn:hover{background-color:rgb(56,107,158);}\\n    #main-content{border-top:3px solid rgb(201,211,231);}\\n    #member-icon-area{\\n      float:right;\\n      padding-top:23px;\\n      padding-bottom:23px;\\n      padding-left:10px;"\\n    }\\n    #member-icon-area a{padding:1px;}\\n    #member-name-area{\\n      padding-left:10px;\\n      padding-right:10px;\\n      padding-top:17px;\\n    }\\n    #notification-icon{color:rgb(211,221,241);}\\n    #notification-icon:hover{color:rgb(255,255,255);}\\n    #site-header{\\n      width:auto;\\n      min-width:1000px;\\n      margin-left:5%;\\n      margin-right:5%;\\n    }\\n    #site-header-container{\\n      background-image:-webkit-gradient(linear, 0 100%, 0 0, from(rgb(51,102,153)), to(rgb(51,102,153)));\\n      background-image:-webkit-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-moz-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-ms-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-o-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      border-bottom:1px solid rgb(210,210,210);\\n      height:67px;\\n    }\\n    #site-footer-container{\\n      background-image:-webkit-gradient(linear, 0 100%, 0 0, from(rgb(51,102,153)), to(rgb(51,102,153)));\\n      background-image:-webkit-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-moz-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-ms-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-o-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      border-top:3px solid rgb(201,211,231);\\n    }\\n    #site-footer-container a{color:rgb(211,221,241);}\\n    #site-footer-container a:hover{color:rgb(255,255,255);}\\n    #twitter-login:hover{opacity:.9;}   \\n    #username-area{color:rgb(211,221,241);}\\n    #username-area:hover{color:rgb(255,255,255);}  \\n    #username-text{font-family:ubuntu;font-weight:bold;}\\n\\n              \\n  </style>\\n  <!--/inline-styles -->\\n\\n  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />\\n  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>\\n  <noscript><link href="\', escape=False)\nresponse.write(URL(\'static\', \'css/web2py_bootstrap_nojs.css\'))\nresponse.write(\'" rel="stylesheet" type="text/css" /></noscript>\\n\\n  \', escape=False)\nresponse.write(\'\\n  \', escape=False)\nresponse.write(\'\\n\\n</head>\\n<!--/head -->\\n\\n<!-- body ================================================== -->\\n<body>\\n\\n  <!-- containter ================================================== -->\\n  <div class="container">\\n    <!-- navbar ================================================== -->\\n    <div class="navbar navbar-inverse navbar-fixed-top" style="position:relative;">\\n      <div class="flash">\', escape=False)\nresponse.write(response.flash or \'\')\nresponse.write(\'</div>\\n      <div class="navbar-inner" id="site-header-container">\\n        <div class="" id="site-header">\\n          <div id="logo-container">\\n            <a href="/">\\n              <img id="logo-inlrn" src="/inlrn/static/images/inlrnlogo.png" />\\n            </a>\\n          </div>\\n          <div id="header-icons" style="margin-top:30px;margin-left:3px;float:left;">\\n            <a href="/discover"><i id="discover-icon" class="fa fa-random"></i></a>\\n            <a href="/courses"><i id="courses-icon" class="fa fa-pencil"></i></a>\\n            <a href="/academies"><i id="academies-icon" class="fa fa-th"></i></a>\\n            <a href="/feed"><i id="feed-icon" class="fa fa-align-justify"></i></a>\\n          </div>\\n          <div id="header-search" style="float:left;margin-left:20px;margin-top:23px;">\\n            <div class="input-append">\\n              <input type="text">\\n              <div class="btn-group" style="margin-top:0px;">\\n                <button class="btn" tabindex="-1"><i class="icon-search"></i></button>\\n                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">\\n                <span class="caret"></span>\\n                </button>\\n                <ul class="dropdown-menu">\\n                <li><a href="#">Action</a></li>\\n                <li><a href="#">Another action</a></li>\\n                <li><a href="#">Something else here</a></li>\\n                <li class="divider"></li>\\n                <li><a href="#">Separated link</a></li>\\n                </ul>            \\n              </div>\\n            </div>\\n          </div>\\n          \', escape=False)\nif auth.is_logged_in():\n    response.write(\'\\n            <ul id="member-name-area" class="nav pull-right nav_bar">\\n              <a data-toggle="dropdown" class="dropdown-toggle" href="#">\\n                <p id="username-text" class="lead"><a id="username-area" href="/member/\', escape=False)\n    response.write(session.auth.user.username)\n    response.write(\'">\', escape=False)\n    response.write(session.auth.user.username)\n    response.write(\'<i class="fa fa-angle-down" id="angle-down-icon"></i></a></p>\\n              </a> \\n              <ul class="dropdown-menu" style="margin-top:0px">              \\n                <li>\\n                    <a href="/account/">\\n                      <i class="fa fa-user" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">account</p>\\n                    </a>\\n                </li>    \\n                <li>\\n                  <a href="/inbox/">\\n                    <i class="fa fa-envelope" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">inbox</p>\\n                  </a>              \\n                </li>\\n                <li>\\n                  <a href="/notifications/">\\n                    <i class="fa fa-globe" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">notifications</p>\\n                  </a>\\n                </li>\\n                <li>\\n                  <a href="/member/\', escape=False)\n    response.write(session.auth.user.username)\n    response.write(\'">\\n                    <i class="fa fa-smile-o" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">profile</p>\\n                  </a>\\n                </li>\\n                <li class="divider"></li>\\n                  <li>\\n                  <a href="/account/logout/">\\n                    <i class="fa fa-power-off" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">logout</p>\\n                  </a>\\n                </li>\\n              </ul>\\n            </ul>\\n            <div id="member-icon-area">\\n              <a href="/notifications"><i id="notification-icon" class="fa fa-globe"></i></a>\\n              <a href="/inbox"><i id="inbox-icon" class="fa fa-envelope"></i></a>\\n            </div>\\n          \', escape=False)\nelse:\n    response.write(\'\\n            <ul id="navbar" class="nav pull-right" style="margin-top:24px;">\\n              <a data-toggle="modal" href="#login-or-signup" id="login-area">login or signup</a>\\n            </ul>\\n          \', escape=False)\n    pass\nresponse.write(\'\\n        </div>\\n      </div>\\n    </div>\\n    <!--/navbar -->\\n\\n    <!-- main-content ================================================== -->\\n    <div id="main-content">\\n      \', escape=False)\nresponse.write(\'\\n      \', escape=False)\nresponse.write(\'\\n\\n<style>\\n\\n#contentwrapper{\\n\\twidth: 100%;\\n}    \\n            \\n#content { \\n    \\n}\\n\\n#left {\\n    \\n\\tfloat: left;\\n\\twidth: 235px;\\n\\tborder-right:1px solid rgb(238,238,238);\\n\\tborder-bottom:1px solid rgb(238,238,238);\\n\\tpadding-left:15px;\\n\\tpadding-bottom:15px;\\n\\n    \\n}\\n.course_title{\\n    size: 20px;\\n}\\n</style>\\n\\n\\n<script>\\n\\n\\t$("#member-picture").modal(\\\'show\\\');\\n\\t$("#user-likes").modal(\\\'show\\\');\\n\\t$("#user-shares").modal(\\\'show\\\');\\n\\t$("#user-collections").modal(\\\'show\\\');\\n\\t$("#user-following").modal(\\\'show\\\');\\n\\t$("#user-followers").modal(\\\'show\\\');\\n\\t$("#collections-block-item").modal(\\\'show\\\');\\n\\t$("#followers-block-item").modal(\\\'show\\\');\\n\\t$("#following-block-item").modal(\\\'show\\\');\\n\\n\\t\\n</script>\\n\\n\\n\', escape=False)\nif request.args(0) is None:\n    response.write(\'\\n\\nNONE\\n\\n\', escape=False)\nelse:\n    response.write(\'\\n\\n<div id="left"><br><br>\\n    \\n    <div style="width:128px;margin-left:40px;margin-top:10px;">\\n\\t\\t<a data-toggle="modal" href="#member-picture"><img src="/static/images/lealrlogo.png" class="img-polaroid"/></a>\\n    </div>\\n    <br><br>\\n    <hr style="margin-left:-15px;">\\n\\n    <div id="info-block" style="margin-left:15px;margin-right:15px;">\\n\\n        <div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><p>Likes</p></div>\\n            <div style="float: right;"><a data-toggle="modal" href="#user-likes">0</a></div>\\n\\t\\t</div>\\n\\t\\t<div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><p>Shares</p></div>\\n            <div style="float: right;"><a data-toggle="modal" href="#user-shares">0</a></div>\\n\\t\\t</div>\\n           \\n    </div>\\n    \\n    <hr style="margin-left:-15px;"><br>\\n    \\n    <div id="courses-block" style="">\\n            \\n        <div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><h4>courses</h4></div>\\n            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-courses">\', escape=False)\n    response.write(len(courses))\n    response.write(\'</a></h4></div>\\n        </div><hr style="margin:0px;margin-left:-15px;"><br>\\n        \\n        <div id="courses-items-block">\\n        </div>\\n    </div>\\n    \\n    <br><br><br><br><br>\\n    \\n    <div id="following-block" style="">\\n            \\n        <div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><h4>following</h4></div>\\n            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-following">0</a></h4></div>\\n\\t\\t</div><hr style="margin:0px;margin-left:-15px;"><br>\\n\\t<div id="following-items-block">\\n\\n\\t</div>\\n      \\n    </div>\\n    \\n    <br><br>\\n    \\n    <div id="followers-block" style="">\\n    \\n\\t\\t<div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><h4>followers</h4></div>\\n            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-followers">0</a></h4></div>\\n\\t\\t</div><hr style="margin:0px;margin-left:-15px;"><br>\\n\\t\\t\\n   \\n\\n    </div>\\n       \\n</div>\\n<div id ="contentwrapper">\\n<div id="content">\\n    \\n    <div style="overflow: hidden;">\\n        <div style="float: left;margin-left:15px;"><h1>\', escape=False)\n    response.write(username_from_url)\n    response.write(\'</h1></div>\\n\\t\\t<p style="margin-left:15px;">online info</p>\\n\\n    \\t\\n        \', escape=False)\n    if auth.is_logged_in():\n        response.write(\'\\n            \', escape=False)\n        if auth.user.username == username_from_url:\n            response.write(\' \\n            \\tthis is yer account!!!!\\n                                         \\n            \', escape=False)\n        else:\n            response.write(\'\\n                not yer account!!!\\n               \\n            \', escape=False)\n            pass\n        response.write(\'\\n        \', escape=False)\n        pass\n    response.write(\'\\n\\n\\t</div>\\n\\t\\n    <div>      \\n      \\n\\t\\t<!--your most recent post or share on your profile is your status-->\\n        <p class="lead" style="margin-left:30px;">status</p>\\n\\t\\t<hr>\\n\\t\\t<br>\\n    </div>\\n    \\n\\n\\n    <ul class="nav nav-tabs" id="profile-tab" data-tabs="tabs" style="padding-left:15px">\\n        <li class="active"><a href="#user-feed" data-toggle="tab">feed</a></li>\\n        <li><a href="#user-content" data-toggle="tab">content</a></li>\\n        <li><a href="#user-info" data-toggle="tab">info</a></li>\\n\\t</ul>\\n \\n    <div class="tab-content" style="margin-left:30px;">\\n    <div class="tab-pane active" id="user-feed">\\n    \\n    \\t<!--if permission to post on feed-->\\n           \\n        <div id="input-options" style="background-color:rgb(220,220,220);">\\n            <div class="dropdown" style="float:left;margin-right:10px;">\\n                <a data-toggle="modal" href="#format-editor-modal" onclick="selection()">format</a>\\n            </div>\\n            <div style="float:left;margin-right:10px;">  \\n                <a class="" data-toggle="modal" href="#insert-editor-modal">insert</a>                          \\n            </div>\\n            <div class="dropdown" style="float:left;margin-right:10px;">\\n                <a class="dropdown-toggle" data-toggle="dropdown" href="#">view<b style="margin-right:5px;"class="caret"></b></a>\\n                <ul class="dropdown-menu">\\n                    <li><a onclick="set_editor_view(\\\'ShowBlocks\\\')">blocks</a></li>\\n\\t\\t\\t\\t\\t<li><a onclick="set_editor_view(\\\'Maximize\\\')">fullscreen</a></li>\\n                    <li><a onclick="set_editor_view(\\\'Source\\\')">source</a></li>\\n                </ul>\\n            </div>\\n        </div>\\n        <br>\\n        \\n       \\n\\n    \\t<!--pass-->\\n            \\n        <div id="member-feed">\\n            <div style="float:left;" id="member-feed-inside">\\n                <ul> \\n                    \', escape=False)\n    response.write(response._vars)\n    response.write(\'\\n\\n                    \', escape=False)\n    for course in courses:\n        response.write(\'\\n                    <li>\\n                    \', escape=False)\n        if course[\'course_member.member_type\'] == \'1\':\n            response.write(\'\\n                        \', escape=False)\n            response.write("He has created course ")\n            response.write(\'\\n                    \', escape=False)\n        else:\n            response.write(\'\\n                        \', escape=False)\n            response.write("He has followed course ")\n            response.write(\'\\n                    \', escape=False)\n            pass\n        response.write(\' \\n                        \\n                        <dir class="course_title">\\n                            \', escape=False)\n        response.write(course[\'course.title\']}\n        </dir>\n        </li>\n        {{pass)\n        response.write(\'\\n                </ul>\\n            \\n            </div>      \\n            \\n        </div>\\n        \\n    </div>\\n    \\n    <div class="tab-pane" id="user-content">\\n    <div style="margin-left:15px;" id="user-content-content">\\n\\n    \\n    <ul class="nav nav-tabs" id="user-content-tab" data-tabs="tabs">\\n        <li class="active"><a href="#user-collections" data-toggle="tab">collections</a></li>\\n        <li><a href="#user-threads" data-toggle="tab">threads</a></li>\\n        <li><a href="#user-comments" data-toggle="tab">comments</a></li>\\n\\t</ul>\\n    \\n    <div class="tab-content">\\n    \\t<div class="tab-pane active" id="user-collections">collections</div>\\n    \\t<div class="tab-pane" id="user-threads">\\n    \\t\\n            <div style="float:left;" id="thread-tag-list-\', escape=False)\n        response.write(request.args(0))\n        response.write(\'">\\n                <h4>tags</h4>\\n                <br>\', escape=False)\n        for x in range(50):\n            response.write(\'\\n                \\t\', escape=False)\n            response.write(x)\n            response.write(\'<br>\\n                \', escape=False)\n            pass\n        response.write(\'\\n            \\n            </div>      \\n                \\n            \\n    \\t\\n    \\t</div>\\n    \\t<div class="tab-pane" id="user-comments">comments</div>\\n\\n    </div>\\n        \\n        <a>Sort</a>\\n        \\n        \', escape=False)\n        user_content_array=[1,2,3,4,5,6,7,8,9,10]\n        response.write(\'\\n        \', escape=False)\n        for content in user_content_array:\n            response.write(\'\\n    \\n        \\t\', escape=False)\n            response.write(content)\n            response.write(\'\\n    \\n        \', escape=False)\n            pass\n        response.write(\'    \\n    \\n    </div>\\n    \\n    \\n    </div>\\n    <div class="tab-pane" id="user-info">\\n        <div style="margin-left:15px;" id="user-info-content">\\n        \\n        <h1>Info</h1><hr>\\n        \\n            <h4>Info-Title</h4>\\n            <h4>Info-Description</h4>\\n\\n            \\n    \\n    \\n\\t\\t\', escape=False)\n        user_info_array=[1,2,3,4,5,6,7,8,9,10]\n        response.write(\'\\n        \', escape=False)\n        for info in user_info_array:\n            response.write(\'\\n    \\n        \\t\', escape=False)\n            response.write(info)\n            response.write(\'\\n    \\n        \', escape=False)\n            pass\n        response.write(\'    \\n        \\n    </div>\\n    \\n    \\n    </div>\\n</div>\\n</div>\\n\\n\\n\\n<div class="modal fade" id="member-picture" style="display:none;">\\n            \\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>\', escape=False)\n        response.write(username_from_url)\n        response.write(\'\\\'s Pictures</h3>\\n    </div>\\n    <div class="modal-body">\\n        \', escape=False)\n        if session.auth is None:\n            response.write(\'\\n        \\tnot logged in yo\\n\\t\\t\', escape=False)\n        elif auth.user.username == username_from_url:\n            response.write(\'\\n        \\t<p>edit thumbnail</p><br>    \\n        \', escape=False)\n        else:\n            response.write(\'\\n        \\tlogged in and not ur account\\n        \', escape=False)\n            pass\n        response.write(\'\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n            \\n</div>\\n\\n\\n<div class="modal fade" id="user-following" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Following</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tUsers following\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n            \\n</div>\\n\\n<div class="modal fade" id="user-followers" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>\', escape=False)\n        response.write(request.args(0))\n        response.write(\'\\\'s Followers</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tFollowing Users\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n<div class="modal fade" id="collections-block-item" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Collection</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tCollection\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n<div class="modal fade" id="followers-block-item" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Followers</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tfollowers\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n<div class="modal fade" id="following-block-item" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Following</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tfollowing         \\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n    \', escape=False)\n        if request.args(1) is None:\n            response.write(\'   \\n    \', escape=False)\n        elif request.args(1) == \'feed\':\n            response.write(\'\\n    \', escape=False)\n        elif request.args(1) == \'content\':\n            response.write(\'\\n    \', escape=False)\n        elif request.args(1) == \'info\':\n            response.write(\'   \\n    \', escape=False)\n            pass\n        response.write(\'\\n\\n\', escape=False)\n        pass\n    response.write(\'\\n\', escape=False)\n    response.write(\'\\n      \', escape=False)\n    response.write(\'\\n    </div>\\n    <!-- /main-content -->\\n\\n    <!-- hidden-content ================================================== -->\\n    <div id="hidden-content">\\n      \', escape=False)\n    if auth.user_id is None:\n        response.write(\'\\n        <div class="modal fade" id="login-or-signup" style="display:none;">\\n          <div class="modal-header" id="login-or-signup-header">\\n            <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n            <h3>Login or Signup</h3>\\n          </div>\\n          <br>\\n          <div class="modal-body" style="">\\n            <div id="external-login" style="display: table;margin: 0 auto;">\\n              <a id="facebook-login"><img src="/inlrn/static/images/facebook-login.png" style="width:64px"/></a>\\n              <a id="twitter-login"><img src="/inlrn/static/images/twitter-login.png" style="width:64px"/></a>\\n              <a id="google-login"><img src="/inlrn/static/images/google-login.png" style="width:64px"/></a> \\n            </div>\\n            <br><br>\\n            <ul style="float:left;margin-left:5%"class="nav nav-tabs" id="profile-tab" data-tabs="tabs">\\n              <li class="active"><a href="#login" data-toggle="tab">Login</a></li>\\n              <li><a href="#signup" data-toggle="tab">Signup</a></li>\\n            </ul>\\n            <br><br><br>\\n            <div class="tab-content" style="margin-left:10%;">\\n              <div class="tab-pane active" id="login">\\n                \', escape=False)\n        response.write(auth.login())\n        response.write(\'\\n              </div>\\n              <div class="tab-pane" id="signup">\\n                \', escape=False)\n        response.write(auth.register())\n        response.write(\'\\n              </div>\\n            </div>\\n          </div>\\n          <div class="modal-footer">\\n          </div>\\n        </div> \\n      \', escape=False)\n        pass\n    response.write(\'  \\n    </div>\\n    <!-- /hidden-content -->\\n  </div> \\n  <!-- /container -->\\n  <!-- footer ================================================== -->\\n  <div id="site-footer-container">\\n    <div class="footer" id="footer">\\n      <br>\\n      <div class="footer-container">\\n        <div class="pull-left" id="footer-links">&#169; \', escape=False)\n    response.write(request.now.year)\n    response.write(\' <a href="/">inlrn.com</a></div>\\n        <div class="pull-right" id="footer-links">\\n          <a href="/about">about</a>,\\n          <a href="/academies">academies</a>,\\n          <a href="/contact">contact</a>,\\n          <a href="/courses">courses</a>,\\n          <a href="/discover">discover</a>,\\n          <a href="/mission">mission</a>,\\n          <a href="/faq">faq</a>,\\n          <a href="/privacy">privacy</a>,\\n          <a href="/stats">stats</a>,\\n          <a href="/tags">tags</a>,\\n          <a href="/threads">threads</a>,\\n          <a href="/terms">terms</a>,\\n          <a href="/transparency">transparency</a>\\n        </div>\\n      </div>\\n    </div>\\n  </div>\\n  <!-- /footer -->\\n  <!-- inline-scripts ============================================= -->\\n  <script>\\n    $("#login-or-signup" ).draggable({handle:"#login-or-signup-header", cursor:"move"}); \\n    $("#logo-inlrn").on({\\n      "mouseover" : function() {\\n        this.src = \\\'/inlrn/static/images/inlrn_hover.png\\\';\\n      },\\n      "mouseout" : function() {\\n        this.src=\\\'/inlrn/static/images/inlrnlogo.png\\\';\\n      }\\n    }); \\n\\n    \', escape=False)\n    if request.function==\'academies\':\n        response.write(\'\\n      $("#academies-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n        pass\n    response.write(\'\\n    \', escape=False)\n    if request.function==\'courses\':\n        response.write(\'\\n      $("#courses-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n        pass\n    response.write(\'\\n    \', escape=False)\n    if request.function==\'discover\':\n        response.write(\'\\n      $("#discover-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n        pass\n    response.write(\'\\n    \', escape=False)\n    if request.function==\'feed\':\n        response.write(\'\\n      $("#feed-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n        pass\n    response.write(\'\\n\\n    $("#member-icon-area").hover(\\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n\\n      }, \\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n\\n      }\\n    );\\n    $("#member-name-area").hover(\\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n\\n      }, \\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n\\n      }\\n    );\\n\\n\\n  </script>\\n  <!-- /inline-scripts -->\\n\\n  <!-- javascript ============================================= -->\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/bootstrap.min.js\'))\n    response.write(\'"></script>\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/web2py_bootstrap.js\'))\n    response.write(\'"></script>\\n  <script src="\', escape=False)\n    response.write(URL(\'static\',\'js/analytics.min.js\'))\n    response.write(\'"></script>\\n  <script type="text/javascript">\\n    analytics.initialize({\\n      \\\'Google Analytics\\\':{trackingId:\\\'UA-22491760-8\\\'} \\n    });\\n  </script>\\n  <!-- /javascript -->\\n\\n</body>\\n<!-- /body -->\\n\\n</html>\\n<!-- /html -->\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__module__'
+p12
+S"'gluon.rocket'"
+p13
+sS'__getslice__'
+p14
+S"<method-wrapper '__getslice__' of SocketTimeout object>"
+p15
+sS'__str__'
+p16
+S"<method-wrapper '__str__' of SocketTimeout object>"
+p17
+sS'__reduce__'
+p18
+S'<built-in method __reduce__ of SocketTimeout object>'
+p19
+sS'__dict__'
+p20
+S'{}'
+p21
+sS'__sizeof__'
+p22
+S'<built-in method __sizeof__ of SocketTimeout object>'
+p23
+sS'__weakref__'
+p24
+S'None'
+p25
+sS'__init__'
+p26
+S"<method-wrapper '__init__' of SocketTimeout object>"
+p27
+sS'__setattr__'
+p28
+S"<method-wrapper '__setattr__' of SocketTimeout object>"
+p29
+sS'__reduce_ex__'
+p30
+S'<built-in method __reduce_ex__ of SocketTimeout object>'
+p31
+sS'__new__'
+p32
+S'<built-in method __new__ of type object>'
+p33
+sS'__format__'
+p34
+S'<built-in method __format__ of SocketTimeout object>'
+p35
+sS'__class__'
+p36
+S"<class 'gluon.rocket.SocketTimeout'>"
+p37
+sS'__doc__'
+p38
+S"'Exception for when a socket times out between requests.'"
+p39
+sS'__getitem__'
+p40
+S"<method-wrapper '__getitem__' of SocketTimeout object>"
+p41
+sS'__setstate__'
+p42
+S'<built-in method __setstate__ of SocketTimeout object>'
+p43
+sS'__getattribute__'
+p44
+S"<method-wrapper '__getattribute__' of SocketTimeout object>"
+p45
+sS'args'
+p46
+S"('Socket timed out before request.',)"
+p47
+sS'__subclasshook__'
+p48
+S'<built-in method __subclasshook__ of type object>'
+p49
+sS'__unicode__'
+p50
+S'<built-in method __unicode__ of SocketTimeout object>'
+p51
+sS'__delattr__'
+p52
+S"<method-wrapper '__delattr__' of SocketTimeout object>"
+p53
+sS'__repr__'
+p54
+S"<method-wrapper '__repr__' of SocketTimeout object>"
+p55
+sS'__hash__'
+p56
+S"<method-wrapper '__hash__' of SocketTimeout object>"
+p57
+ssS'evalue'
+p58
+S'Socket timed out before request.'
+p59
+sS'frames'
+p60
+(lp61
+(dp62
+S'file'
+p63
+S'/home/john/Downloads/web2py/gluon/rocket.py'
+p64
+sS'dump'
+p65
+(dp66
+S'self'
+p67
+S'<WSGIWorker(Thread-10, started daemon 139901244798720)>'
+p68
+sS'conn'
+p69
+S'<gluon.rocket.Connection object>'
+p70
+sS'self.run_app'
+p71
+S'<bound method WSGIWorker.run_app of <WSGIWorker(Thread-10, started daemon 139901244798720)>>'
+p72
+ssS'lnum'
+p73
+I1337
+sS'lines'
+p74
+(dp75
+I1332
+S'            # Enter connection serve loop'
+p76
+sI1333
+S'            while True:'
+p77
+sI1334
+S'                if __debug__:'
+p78
+sI1335
+S"                    self.err_log.debug('Serving a request')"
+p79
+sI1336
+S'                try:'
+p80
+sI1337
+S'                    self.run_app(conn)'
+p81
+sI1338
+S'                except:'
+p82
+sI1339
+S'                    exc = sys.exc_info()'
+p83
+sI1340
+S'                    handled = self._handleError(*exc)'
+p84
+sI1341
+S'                    if handled:'
+p85
+ssS'call'
+p86
+S'(self=<WSGIWorker(Thread-10, started daemon 139901244798720)>)'
+p87
+sS'func'
+p88
+S'run'
+p89
+sa(dp90
+g63
+S'/home/john/Downloads/web2py/gluon/rocket.py'
+p91
+sg65
+(dp92
+S'self'
+p93
+S'<WSGIWorker(Thread-10, started daemon 139901244798720)>'
+p94
+sS'self.environ'
+p95
+S"{'HTTP_ACCEPT': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8', 'HTTP_ACCEPT_ENCODING': 'gzip,deflate,sdch', 'HTTP_ACCEPT_LANGUAGE': 'en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4', 'HTTP_CACHE_CONTROL': 'max-age=0', 'HTTP_CONNECTION': 'keep-alive', 'HTTP_COOKIE': 'session_id_welcome=127.0.0.1-9056ebd6-82ca-4d02-...1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)', 'HTTP_HOST': '127.0.0.1:8000', 'HTTP_USER_AGENT': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537....L, like Gecko) Chrome/33.0.1750.152 Safari/537.36', 'PATH_INFO': '/inlrn/default/member/jokerfeng2010', 'QUERY_STRING': '', ...}"
+p96
+sS'sock_file'
+p97
+S'<socket._fileobject object>'
+p98
+sS'environ'
+p99
+S'undefined'
+p100
+sS'self.build_environ'
+p101
+S'<bound method WSGIWorker.build_environ of <WSGIWorker(Thread-10, started daemon 139901244798720)>>'
+p102
+sS'conn'
+p103
+S'<gluon.rocket.Connection object>'
+p104
+ssg73
+I1830
+sg74
+(dp105
+I1825
+S'        else:'
+p106
+sI1826
+S'            sock_file = conn.makefile(BUF_SIZE)'
+p107
+sI1827
+S''
+sI1828
+S'        try:'
+p108
+sI1829
+S'            # Read the headers and build our WSGI environment'
+p109
+sI1830
+S'            self.environ = environ = self.build_environ(sock_file, conn)'
+p110
+sI1831
+S''
+sI1832
+S'            # Handle 100 Continue'
+p111
+sI1833
+S"            if environ.get('HTTP_EXPECT', '') == '100-continue':"
+p112
+sI1834
+S"                res = environ['SERVER_PROTOCOL'] + ' 100 Continue\\r\\n\\r\\n'"
+p113
+ssg86
+S'(self=<WSGIWorker(Thread-10, started daemon 139901244798720)>, conn=<gluon.rocket.Connection object>)'
+p114
+sg88
+S'run_app'
+p115
+sa(dp116
+g63
+S'/home/john/Downloads/web2py/gluon/rocket.py'
+p117
+sg65
+(dp118
+S'sock_file'
+p119
+S'<socket._fileobject object>'
+p120
+sS'self.read_request_line'
+p121
+S'<bound method WSGIWorker.read_request_line of <W...rker(Thread-10, started daemon 139901244798720)>>'
+p122
+sS'self'
+p123
+S'<WSGIWorker(Thread-10, started daemon 139901244798720)>'
+p124
+sS'request'
+p125
+g100
+ssg73
+I1650
+sg74
+(dp126
+I1645
+S'                                      "wsgiorg.futures": executor.futures})'
+p127
+sI1646
+S''
+sI1647
+S'    def build_environ(self, sock_file, conn):'
+p128
+sI1648
+S'        """ Build the execution environment. """'
+p129
+sI1649
+S'        # Grab the request line'
+p130
+sI1650
+S'        request = self.read_request_line(sock_file)'
+p131
+sI1651
+S''
+sI1652
+S'        # Copy the Base Environment'
+p132
+sI1653
+S'        environ = self.base_environ.copy()'
+p133
+sI1654
+S''
+ssg86
+S'(self=<WSGIWorker(Thread-10, started daemon 139901244798720)>, sock_file=<socket._fileobject object>, conn=<gluon.rocket.Connection object>)'
+p134
+sg88
+S'build_environ'
+p135
+sa(dp136
+g63
+S'/home/john/Downloads/web2py/gluon/rocket.py'
+p137
+sg65
+(dp138
+S'global SocketTimeout'
+p139
+S"<class 'gluon.rocket.SocketTimeout'>"
+p140
+ssg73
+I1401
+sg74
+(dp141
+I1396
+S''
+sI1397
+S'                d = sock_file.readline()'
+p142
+sI1398
+S'                if PY3K:'
+p143
+sI1399
+S"                    d = d.decode('ISO-8859-1')"
+p144
+sI1400
+S'        except socket.timeout:'
+p145
+sI1401
+S"            raise SocketTimeout('Socket timed out before request.')"
+p146
+sI1402
+S'        except TypeError:'
+p147
+sI1403
+S'            raise SocketClosed('
+p148
+sI1404
+S"                'SSL bug caused closure of socket.  See '"
+p149
+sI1405
+S'                \'"https://groups.google.com/d/topic/web2py/P_Gw0JxWzCs".\')'
+p150
+ssg86
+S'(self=<WSGIWorker(Thread-10, started daemon 139901244798720)>, sock_file=<socket._fileobject object>)'
+p151
+sg88
+S'read_request_line'
+p152
+sasS'pyver'
+p153
+S'Python 2.7.5+: /usr/bin/python (prefix: /usr)'
+p154
+sS'etype'
+p155
+S"<class 'gluon.rocket.SocketTimeout'>"
+p156
+sS'date'
+p157
+S'Sun Mar 30 01:46:06 2014'
+p158
+sS'locals'
+p159
+(dp160
+S'sock_file'
+p161
+S'<socket._fileobject object>'
+p162
+sS'self'
+p163
+S'<WSGIWorker(Thread-10, started daemon 139901244798720)>'
+p164
+sssS'traceback'
+p165
+S'Traceback (most recent call last):\n  File "/home/john/Downloads/web2py/gluon/rocket.py", line 1337, in run\n    self.run_app(conn)\n  File "/home/john/Downloads/web2py/gluon/rocket.py", line 1830, in run_app\n    self.environ = environ = self.build_environ(sock_file, conn)\n  File "/home/john/Downloads/web2py/gluon/rocket.py", line 1650, in build_environ\n    request = self.read_request_line(sock_file)\n  File "/home/john/Downloads/web2py/gluon/rocket.py", line 1401, in read_request_line\n    raise SocketTimeout(\'Socket timed out before request.\')\nSocketTimeout: Socket timed out before request.\n'
+p166
+s.
