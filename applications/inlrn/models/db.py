@@ -63,6 +63,19 @@ db.define_table('academy',
 )
 
 ################################
+####course_member#####################
+################################  
+import datetime
+
+
+db.define_table('course_member',
+    Field('auth_user_id','string'),
+    Field('course_id','string'),
+    Field('member_type','string'),
+    Field('join_time','datetime', default=datetime.datetime.utcnow()),
+)
+
+################################
 ####academy_tag#################
 ################################ 
 db.define_table('academy_tag',
@@ -75,6 +88,7 @@ db.define_table('academy_tag',
 ################################ 
 db.define_table('course',
     Field('academy_id_array','list:integer'),
+    Field('auth_user_id','string'),
     Field('url_title','string'),
     Field('title','string'),
     Field('description','string')

@@ -1,0 +1,381 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'Row' object has no attribute 'id'"
+p3
+sS'layer'
+p4
+S'/home/john/Downloads/web2py/applications/inlrn/views/default/member.html'
+p5
+sS'code'
+p6
+S'response.write(\'<!-- html ================================================== -->\\n<!DOCTYPE html>\\n<!--[if IE 8]><html class="ie ie8 ie-lte9 ie-lte8 no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <![endif]-->\\n<!--[if IE 9]><html class="ie9 ie-lte9 no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <![endif]-->\\n<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="\', escape=False)\nresponse.write(T.accepted_language or \'en\')\nresponse.write(\'"> <!--<![endif]-->\\n<!-- head ================================================== -->\\n<head>\\n  <!-- title ================================================== -->\\n  <title>\', escape=False)\nresponse.write(response.title)\nresponse.write(\'</title>\\n  <!--/title -->\\n\\n  <!--[if !HTML5]><meta http-equiv="X-UA-Compatible" content="IE=edge\', escape=False)\nresponse.write(not request.is_local and \',chrome=1\' or \'\')\nresponse.write(\'"><![endif]-->\\n\\n  <!-- meta ================================================== -->   \\n  <meta charset="utf-8" />\\n  <!-- http://dev.w3.org/html5/markup/meta.name.html -->\\n  <meta name="application-name" content="\', escape=False)\nresponse.write(request.application)\nresponse.write(\'" />\\n  <!-- set site up: http://google.com/webmasters -->\\n  <meta name="google-site-verification" content="" />\\n  <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable = yes"  />\\n  <!--/meta -->\\n\\n  <!-- icons ================================================== -->\\n  <link rel="shortcut icon" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/favicon.ico\'))\nresponse.write(\'" type="image/x-icon">\\n  <link rel="apple-touch-icon" href="\', escape=False)\nresponse.write(URL(\'static\',\'images/favicon.png\'))\nresponse.write(\'">\\n  <!--/icons -->\\n\\n  <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/modernizr.custom.js\'))\nresponse.write(\'"></script>\\n  \', escape=False)\nresponse.write(\'<script type="text/javascript"><!--\\n    // These variables are used by the web2py_ajax_init function in web2py_ajax.js (which is loaded below).\\n    var w2p_ajax_confirm_message = "\', escape=False)\nresponse.write(T(\'Are you sure you want to delete this object?\'))\nresponse.write(\'";\\n    var w2p_ajax_date_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d\'))\nresponse.write(\'";\\n    var w2p_ajax_datetime_format = "\', escape=False)\nresponse.write(T(\'%Y-%m-%d %H:%M:%S\'))\nresponse.write(\'";\\n    var ajax_error_500 = \\\'\', escape=False)\nresponse.write(XML(T(\'An error occured, please %s the page\') % A(T(\'reload\'), _href=URL(args=request.args, vars=request.get_vars))))\nresponse.write("\'\\n    //--></script>\\n", escape=False)\nresponse.files.insert(0,URL(\'static\',\'js/jquery.js\'))\nresponse.files.insert(1,URL(\'static\',\'css/calendar.css\'))\nresponse.files.insert(2,URL(\'static\',\'js/calendar.js\'))\nresponse.files.insert(3,URL(\'static\',\'js/web2py.js\'))\nresponse.include_meta()\nresponse.include_files()\nresponse.write(\'\\n\', escape=False)\nresponse.write(\'\\n\\n  <!-- stylesheets ================================================== -->\\n  <link rel="stylesheet" href="/inlrn/static/css/web2py.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/bootstrap.min.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/bootstrap-responsive.min.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/web2py_bootstrap.css" type="text/css" />\\n  <link rel="stylesheet" href="/inlrn/static/css/font-awesome.css">\\n  <!--/stylesheets -->\\n\\n  <!-- inline-styles ================================================== -->\\n  <style type="text/css">\\n    html, body {\\n      height: 100%;\\n    }\\n    .centered-width{\\n      margin-left:6%;\\n      margin-right:6%;\\n    }\\n    .container{\\n      width:100%;\\n      min-height: 100%;\\n      height: auto !important;\\n      height: 100%;\\n      margin: 0 auto -56px;\\n    }\\n    .footer{\\n      height:28px;\\n      padding-left:5%;\\n      padding-right:5%;\\n      padding-bottom:10px;   \\n    }\\n    .modal.fade {\\n      top: 7%;\\n      -webkit-transition: opacity 0.3s linear;\\n      -moz-transition: opacity 0.3s linear;\\n      -o-transition: opacity 0.3s linear;\\n      transition: opacity 0.3s linear;\\n    }\\n    .modal.fade.in {top: 7%;}       \\n    .navbar .btn-navbar {display:none;}\\n    a{color:rgb(71,122,173);}\\n    a:hover{text-decoration: none;color:rgb(51,102,153);}\\n    img.opacity-img{opacity:0.8;}\\n    img.opacity-img:hover{opacity:1;}\\n    #angle-down-icon{color:rgb(211,221,241);margin-left:5px;}\\n    #angle-down-icon:hover{color:rgb(255,255,255);}\\n    #academies-icon{color:rgb(211,221,241);}\\n    #academies-icon:hover{color:rgb(255,255,255);}\\n    #courses-icon{color:rgb(211,221,241);}\\n    #courses-icon:hover{color:rgb(255,255,255);}\\n    #discover-icon{color:rgb(211,221,241);}\\n    #discover-icon:hover{color:rgb(255,255,255);}\\n    #facebook-login:hover{opacity:.9;}\\n    #feed-icon{color:rgb(211,221,241);}\\n    #feed-icon:hover{color:rgb(255,255,255);}\\n    #footer-links{font-family:ubuntu;color:rgb(201,211,231);margin-top:-15px;}\\n    #google-login:hover{opacity:.9;}\\n    #inbox-icon{color:rgb(211,221,241);}\\n    #inbox-icon:hover{color:rgb(255,255,255);}\\n    #login-area{\\n      font-size:14px;\\n      font-family:ubuntu;\\n      color:rgb(235,235,235);\\n    }\\n    #login-area:hover{color:rgb(255,255,255)}\\n    #logo-inlrn{\\n      float:left;\\n      height:50px;\\n      padding-top:2px;\\n      padding-right:10px;\\n      padding-bottom:13px;\\n    }\\n    #logo-inlrn:hover{background-color:rgb(56,107,158);}\\n    #main-content{border-top:3px solid rgb(201,211,231);}\\n    #member-icon-area{\\n      float:right;\\n      padding-top:23px;\\n      padding-bottom:23px;\\n      padding-left:10px;"\\n    }\\n    #member-icon-area a{padding:1px;}\\n    #member-name-area{\\n      padding-left:10px;\\n      padding-right:10px;\\n      padding-top:17px;\\n    }\\n    #notification-icon{color:rgb(211,221,241);}\\n    #notification-icon:hover{color:rgb(255,255,255);}\\n    #site-header{\\n      width:auto;\\n      min-width:1000px;\\n      margin-left:5%;\\n      margin-right:5%;\\n    }\\n    #site-header-container{\\n      background-image:-webkit-gradient(linear, 0 100%, 0 0, from(rgb(51,102,153)), to(rgb(51,102,153)));\\n      background-image:-webkit-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-moz-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-ms-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-o-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      border-bottom:1px solid rgb(210,210,210);\\n      height:67px;\\n    }\\n    #site-footer-container{\\n      background-image:-webkit-gradient(linear, 0 100%, 0 0, from(rgb(51,102,153)), to(rgb(51,102,153)));\\n      background-image:-webkit-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-moz-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-ms-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:-o-linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      background-image:linear-gradient(rgb(51,102,153), rgb(51,102,153));\\n      border-top:3px solid rgb(201,211,231);\\n    }\\n    #site-footer-container a{color:rgb(211,221,241);}\\n    #site-footer-container a:hover{color:rgb(255,255,255);}\\n    #twitter-login:hover{opacity:.9;}   \\n    #username-area{color:rgb(211,221,241);}\\n    #username-area:hover{color:rgb(255,255,255);}  \\n    #username-text{font-family:ubuntu;font-weight:bold;}\\n\\n              \\n  </style>\\n  <!--/inline-styles -->\\n\\n  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />\\n  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>\\n  <noscript><link href="\', escape=False)\nresponse.write(URL(\'static\', \'css/web2py_bootstrap_nojs.css\'))\nresponse.write(\'" rel="stylesheet" type="text/css" /></noscript>\\n\\n  \', escape=False)\nresponse.write(\'\\n  \', escape=False)\nresponse.write(\'\\n\\n</head>\\n<!--/head -->\\n\\n<!-- body ================================================== -->\\n<body>\\n\\n  <!-- containter ================================================== -->\\n  <div class="container">\\n    <!-- navbar ================================================== -->\\n    <div class="navbar navbar-inverse navbar-fixed-top" style="position:relative;">\\n      <div class="flash">\', escape=False)\nresponse.write(response.flash or \'\')\nresponse.write(\'</div>\\n      <div class="navbar-inner" id="site-header-container">\\n        <div class="" id="site-header">\\n          <div id="logo-container">\\n            <a href="/">\\n              <img id="logo-inlrn" src="/inlrn/static/images/inlrnlogo.png" />\\n            </a>\\n          </div>\\n          <div id="header-icons" style="margin-top:30px;margin-left:3px;float:left;">\\n            <a href="/discover"><i id="discover-icon" class="fa fa-random"></i></a>\\n            <a href="/courses"><i id="courses-icon" class="fa fa-pencil"></i></a>\\n            <a href="/academies"><i id="academies-icon" class="fa fa-th"></i></a>\\n            <a href="/feed"><i id="feed-icon" class="fa fa-align-justify"></i></a>\\n          </div>\\n          <div id="header-search" style="float:left;margin-left:20px;margin-top:23px;">\\n            <div class="input-append">\\n              <input type="text">\\n              <div class="btn-group" style="margin-top:0px;">\\n                <button class="btn" tabindex="-1"><i class="icon-search"></i></button>\\n                <button class="btn dropdown-toggle" data-toggle="dropdown" tabindex="-1">\\n                <span class="caret"></span>\\n                </button>\\n                <ul class="dropdown-menu">\\n                <li><a href="#">Action</a></li>\\n                <li><a href="#">Another action</a></li>\\n                <li><a href="#">Something else here</a></li>\\n                <li class="divider"></li>\\n                <li><a href="#">Separated link</a></li>\\n                </ul>            \\n              </div>\\n            </div>\\n          </div>\\n          \', escape=False)\nif auth.is_logged_in():\n    response.write(\'\\n            <ul id="member-name-area" class="nav pull-right nav_bar">\\n              <a data-toggle="dropdown" class="dropdown-toggle" href="#">\\n                <p id="username-text" class="lead"><a id="username-area" href="/member/\', escape=False)\n    response.write(session.auth.user.username)\n    response.write(\'">\', escape=False)\n    response.write(session.auth.user.username)\n    response.write(\'<i class="fa fa-angle-down" id="angle-down-icon"></i></a></p>\\n              </a> \\n              <ul class="dropdown-menu" style="margin-top:0px">              \\n                <li>\\n                    <a href="/account/">\\n                      <i class="fa fa-user" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">account</p>\\n                    </a>\\n                </li>    \\n                <li>\\n                  <a href="/inbox/">\\n                    <i class="fa fa-envelope" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">inbox</p>\\n                  </a>              \\n                </li>\\n                <li>\\n                  <a href="/notifications/">\\n                    <i class="fa fa-globe" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">notifications</p>\\n                  </a>\\n                </li>\\n                <li>\\n                  <a href="/member/\', escape=False)\n    response.write(session.auth.user.username)\n    response.write(\'">\\n                    <i class="fa fa-smile-o" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">profile</p>\\n                  </a>\\n                </li>\\n                <li class="divider"></li>\\n                  <li>\\n                  <a href="/account/logout/">\\n                    <i class="fa fa-power-off" style="float:left;margin-top:3px;"></i><p style="margin-left:25px;">logout</p>\\n                  </a>\\n                </li>\\n              </ul>\\n            </ul>\\n            <div id="member-icon-area">\\n              <a href="/notifications"><i id="notification-icon" class="fa fa-globe"></i></a>\\n              <a href="/inbox"><i id="inbox-icon" class="fa fa-envelope"></i></a>\\n            </div>\\n          \', escape=False)\nelse:\n    response.write(\'\\n            <ul id="navbar" class="nav pull-right" style="margin-top:24px;">\\n              <a data-toggle="modal" href="#login-or-signup" id="login-area">login or signup</a>\\n            </ul>\\n          \', escape=False)\n    pass\nresponse.write(\'\\n        </div>\\n      </div>\\n    </div>\\n    <!--/navbar -->\\n\\n    <!-- main-content ================================================== -->\\n    <div id="main-content">\\n      \', escape=False)\nresponse.write(\'\\n      \', escape=False)\nresponse.write(\'\\n\\n<style>\\n\\n#contentwrapper{\\n\\twidth: 100%;\\n}    \\n            \\n#content { \\n    \\n}\\n\\n#left {\\n    \\n\\tfloat: left;\\n\\twidth: 235px;\\n\\tborder-right:1px solid rgb(238,238,238);\\n\\tborder-bottom:1px solid rgb(238,238,238);\\n\\tpadding-left:15px;\\n\\tpadding-bottom:15px;\\n\\n    \\n}\\n    \\n</style>\\n\\n\\n<script>\\n\\n\\t$("#member-picture").modal(\\\'show\\\');\\n\\t$("#user-likes").modal(\\\'show\\\');\\n\\t$("#user-shares").modal(\\\'show\\\');\\n\\t$("#user-collections").modal(\\\'show\\\');\\n\\t$("#user-following").modal(\\\'show\\\');\\n\\t$("#user-followers").modal(\\\'show\\\');\\n\\t$("#collections-block-item").modal(\\\'show\\\');\\n\\t$("#followers-block-item").modal(\\\'show\\\');\\n\\t$("#following-block-item").modal(\\\'show\\\');\\n\\n\\t\\n</script>\\n\\n\\n\', escape=False)\nif request.args(0) is None:\n    response.write(\'\\n\\nNONE\\n\\n\', escape=False)\nelse:\n    response.write(\'\\n\\n<div id="left"><br><br>\\n    \\n    <div style="width:128px;margin-left:40px;margin-top:10px;">\\n\\t\\t<a data-toggle="modal" href="#member-picture"><img src="/static/images/lealrlogo.png" class="img-polaroid"/></a>\\n    </div>\\n    <br><br>\\n    <hr style="margin-left:-15px;">\\n\\n    <div id="info-block" style="margin-left:15px;margin-right:15px;">\\n\\n        <div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><p>Likes</p></div>\\n            <div style="float: right;"><a data-toggle="modal" href="#user-likes">0</a></div>\\n\\t\\t</div>\\n\\t\\t<div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><p>Shares</p></div>\\n            <div style="float: right;"><a data-toggle="modal" href="#user-shares">0</a></div>\\n\\t\\t</div>\\n           \\n    </div>\\n    \\n    <hr style="margin-left:-15px;"><br>\\n    \\n    <div id="courses-block" style="">\\n            \\n        <div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><h4>courses</h4></div>\\n            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-courses">\', escape=False)\n    response.write(len(courses))\n    response.write(\'</a></h4></div>\\n        </div><hr style="margin:0px;margin-left:-15px;"><br>\\n        \\n        <div id="courses-items-block">\\n        </div>\\n    </div>\\n    \\n    <br><br><br><br><br>\\n    \\n    <div id="following-block" style="">\\n            \\n        <div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><h4>following</h4></div>\\n            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-following">0</a></h4></div>\\n\\t\\t</div><hr style="margin:0px;margin-left:-15px;"><br>\\n\\t<div id="following-items-block">\\n\\n\\t</div>\\n      \\n    </div>\\n    \\n    <br><br>\\n    \\n    <div id="followers-block" style="">\\n    \\n\\t\\t<div style="overflow: hidden;">\\n    \\t\\t<div style="float: left;"><h4>followers</h4></div>\\n            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-followers">0</a></h4></div>\\n\\t\\t</div><hr style="margin:0px;margin-left:-15px;"><br>\\n\\t\\t\\n   \\n\\n    </div>\\n       \\n</div>\\n<div id ="contentwrapper">\\n<div id="content">\\n    \\n    <div style="overflow: hidden;">\\n        <div style="float: left;margin-left:15px;"><h1>\', escape=False)\n    response.write(username_from_url)\n    response.write(\'</h1></div>\\n\\t\\t<p style="margin-left:15px;">online info</p>\\n\\n    \\t\\n        \', escape=False)\n    if auth.is_logged_in():\n        response.write(\'\\n            \', escape=False)\n        if auth.user.username == username_from_url:\n            response.write(\' \\n            \\tthis is yer account!!!!\\n                                         \\n            \', escape=False)\n        else:\n            response.write(\'\\n                not yer account!!!\\n               \\n            \', escape=False)\n            pass\n        response.write(\'\\n        \', escape=False)\n        pass\n    response.write(\'\\n\\n\\t</div>\\n\\t\\n    <div>      \\n      \\n\\t\\t<!--your most recent post or share on your profile is your status-->\\n        <p class="lead" style="margin-left:30px;">status</p>\\n\\t\\t<hr>\\n\\t\\t<br>\\n    </div>\\n    \\n\\n\\n    <ul class="nav nav-tabs" id="profile-tab" data-tabs="tabs" style="padding-left:15px">\\n        <li class="active"><a href="#user-feed" data-toggle="tab">feed</a></li>\\n        <li><a href="#user-content" data-toggle="tab">content</a></li>\\n        <li><a href="#user-info" data-toggle="tab">info</a></li>\\n\\t</ul>\\n \\n    <div class="tab-content" style="margin-left:30px;">\\n    <div class="tab-pane active" id="user-feed">\\n    \\n    \\t<!--if permission to post on feed-->\\n           \\n        <div id="input-options" style="background-color:rgb(220,220,220);">\\n            <div class="dropdown" style="float:left;margin-right:10px;">\\n                <a data-toggle="modal" href="#format-editor-modal" onclick="selection()">format</a>\\n            </div>\\n            <div style="float:left;margin-right:10px;">  \\n                <a class="" data-toggle="modal" href="#insert-editor-modal">insert</a>                          \\n            </div>\\n            <div class="dropdown" style="float:left;margin-right:10px;">\\n                <a class="dropdown-toggle" data-toggle="dropdown" href="#">view<b style="margin-right:5px;"class="caret"></b></a>\\n                <ul class="dropdown-menu">\\n                    <li><a onclick="set_editor_view(\\\'ShowBlocks\\\')">blocks</a></li>\\n\\t\\t\\t\\t\\t<li><a onclick="set_editor_view(\\\'Maximize\\\')">fullscreen</a></li>\\n                    <li><a onclick="set_editor_view(\\\'Source\\\')">source</a></li>\\n                </ul>\\n            </div>\\n        </div>\\n        <br>\\n        \\n       \\n\\n    \\t<!--pass-->\\n            \\n        <div id="member-feed">\\n            <div style="float:left;" id="member-feed-inside">\\n                <ul> \\n\\n\\n                    \', escape=False)\n    for course in courses:\n        response.write(\'\\n                    <li>\\n                    \', escape=False)\n        response.write(course[\'id\'])\n        response.write(\'\\n                    </li>\\n                    \', escape=False)\n        pass\n    response.write(\'\\n                </ul>\\n            \\n            </div>      \\n            \\n        </div>\\n        \\n    </div>\\n    \\n    <div class="tab-pane" id="user-content">\\n    <div style="margin-left:15px;" id="user-content-content">\\n\\n    \\n    <ul class="nav nav-tabs" id="user-content-tab" data-tabs="tabs">\\n        <li class="active"><a href="#user-collections" data-toggle="tab">collections</a></li>\\n        <li><a href="#user-threads" data-toggle="tab">threads</a></li>\\n        <li><a href="#user-comments" data-toggle="tab">comments</a></li>\\n\\t</ul>\\n    \\n    <div class="tab-content">\\n    \\t<div class="tab-pane active" id="user-collections">collections</div>\\n    \\t<div class="tab-pane" id="user-threads">\\n    \\t\\n            <div style="float:left;" id="thread-tag-list-\', escape=False)\n    response.write(request.args(0))\n    response.write(\'">\\n                <h4>tags</h4>\\n                <br>\', escape=False)\n    for x in range(50):\n        response.write(\'\\n                \\t\', escape=False)\n        response.write(x)\n        response.write(\'<br>\\n                \', escape=False)\n        pass\n    response.write(\'\\n            \\n            </div>      \\n                \\n            \\n    \\t\\n    \\t</div>\\n    \\t<div class="tab-pane" id="user-comments">comments</div>\\n\\n    </div>\\n        \\n        <a>Sort</a>\\n        \\n        \', escape=False)\n    user_content_array=[1,2,3,4,5,6,7,8,9,10]\n    response.write(\'\\n        \', escape=False)\n    for content in user_content_array:\n        response.write(\'\\n    \\n        \\t\', escape=False)\n        response.write(content)\n        response.write(\'\\n    \\n        \', escape=False)\n        pass\n    response.write(\'    \\n    \\n    </div>\\n    \\n    \\n    </div>\\n    <div class="tab-pane" id="user-info">\\n        <div style="margin-left:15px;" id="user-info-content">\\n        \\n        <h1>Info</h1><hr>\\n        \\n            <h4>Info-Title</h4>\\n            <h4>Info-Description</h4>\\n\\n            \\n    \\n    \\n\\t\\t\', escape=False)\n    user_info_array=[1,2,3,4,5,6,7,8,9,10]\n    response.write(\'\\n        \', escape=False)\n    for info in user_info_array:\n        response.write(\'\\n    \\n        \\t\', escape=False)\n        response.write(info)\n        response.write(\'\\n    \\n        \', escape=False)\n        pass\n    response.write(\'    \\n        \\n    </div>\\n    \\n    \\n    </div>\\n</div>\\n</div>\\n\\n\\n\\n<div class="modal fade" id="member-picture" style="display:none;">\\n            \\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>\', escape=False)\n    response.write(username_from_url)\n    response.write(\'\\\'s Pictures</h3>\\n    </div>\\n    <div class="modal-body">\\n        \', escape=False)\n    if session.auth is None:\n        response.write(\'\\n        \\tnot logged in yo\\n\\t\\t\', escape=False)\n    elif auth.user.username == username_from_url:\n        response.write(\'\\n        \\t<p>edit thumbnail</p><br>    \\n        \', escape=False)\n    else:\n        response.write(\'\\n        \\tlogged in and not ur account\\n        \', escape=False)\n        pass\n    response.write(\'\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n            \\n</div>\\n\\n\\n<div class="modal fade" id="user-following" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Following</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tUsers following\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n            \\n</div>\\n\\n<div class="modal fade" id="user-followers" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>\', escape=False)\n    response.write(request.args(0))\n    response.write(\'\\\'s Followers</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tFollowing Users\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n<div class="modal fade" id="collections-block-item" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Collection</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tCollection\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n<div class="modal fade" id="followers-block-item" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Followers</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tfollowers\\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n<div class="modal fade" id="following-block-item" style="display:none;">\\n    <div class="modal-header">\\n        <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n        <h3>Following</h3>\\n    </div>\\n    <div class="modal-body">\\n\\t\\tfollowing         \\n    </div>\\n    <div class="modal-footer">\\n        footer\\n    </div>\\n</div>\\n\\n    \', escape=False)\n    if request.args(1) is None:\n        response.write(\'   \\n    \', escape=False)\n    elif request.args(1) == \'feed\':\n        response.write(\'\\n    \', escape=False)\n    elif request.args(1) == \'content\':\n        response.write(\'\\n    \', escape=False)\n    elif request.args(1) == \'info\':\n        response.write(\'   \\n    \', escape=False)\n        pass\n    response.write(\'\\n\\n\', escape=False)\n    pass\nresponse.write(\'\\n\', escape=False)\nresponse.write(\'\\n      \', escape=False)\nresponse.write(\'\\n    </div>\\n    <!-- /main-content -->\\n\\n    <!-- hidden-content ================================================== -->\\n    <div id="hidden-content">\\n      \', escape=False)\nif auth.user_id is None:\n    response.write(\'\\n        <div class="modal fade" id="login-or-signup" style="display:none;">\\n          <div class="modal-header" id="login-or-signup-header">\\n            <a class="close" data-dismiss="modal">\\xc3\\x97</a>\\n            <h3>Login or Signup</h3>\\n          </div>\\n          <br>\\n          <div class="modal-body" style="">\\n            <div id="external-login" style="display: table;margin: 0 auto;">\\n              <a id="facebook-login"><img src="/inlrn/static/images/facebook-login.png" style="width:64px"/></a>\\n              <a id="twitter-login"><img src="/inlrn/static/images/twitter-login.png" style="width:64px"/></a>\\n              <a id="google-login"><img src="/inlrn/static/images/google-login.png" style="width:64px"/></a> \\n            </div>\\n            <br><br>\\n            <ul style="float:left;margin-left:5%"class="nav nav-tabs" id="profile-tab" data-tabs="tabs">\\n              <li class="active"><a href="#login" data-toggle="tab">Login</a></li>\\n              <li><a href="#signup" data-toggle="tab">Signup</a></li>\\n            </ul>\\n            <br><br><br>\\n            <div class="tab-content" style="margin-left:10%;">\\n              <div class="tab-pane active" id="login">\\n                \', escape=False)\n    response.write(auth.login())\n    response.write(\'\\n              </div>\\n              <div class="tab-pane" id="signup">\\n                \', escape=False)\n    response.write(auth.register())\n    response.write(\'\\n              </div>\\n            </div>\\n          </div>\\n          <div class="modal-footer">\\n          </div>\\n        </div> \\n      \', escape=False)\n    pass\nresponse.write(\'  \\n    </div>\\n    <!-- /hidden-content -->\\n  </div> \\n  <!-- /container -->\\n  <!-- footer ================================================== -->\\n  <div id="site-footer-container">\\n    <div class="footer" id="footer">\\n      <br>\\n      <div class="footer-container">\\n        <div class="pull-left" id="footer-links">&#169; \', escape=False)\nresponse.write(request.now.year)\nresponse.write(\' <a href="/">inlrn.com</a></div>\\n        <div class="pull-right" id="footer-links">\\n          <a href="/about">about</a>,\\n          <a href="/academies">academies</a>,\\n          <a href="/contact">contact</a>,\\n          <a href="/courses">courses</a>,\\n          <a href="/discover">discover</a>,\\n          <a href="/mission">mission</a>,\\n          <a href="/faq">faq</a>,\\n          <a href="/privacy">privacy</a>,\\n          <a href="/stats">stats</a>,\\n          <a href="/tags">tags</a>,\\n          <a href="/threads">threads</a>,\\n          <a href="/terms">terms</a>,\\n          <a href="/transparency">transparency</a>\\n        </div>\\n      </div>\\n    </div>\\n  </div>\\n  <!-- /footer -->\\n  <!-- inline-scripts ============================================= -->\\n  <script>\\n    $("#login-or-signup" ).draggable({handle:"#login-or-signup-header", cursor:"move"}); \\n    $("#logo-inlrn").on({\\n      "mouseover" : function() {\\n        this.src = \\\'/inlrn/static/images/inlrn_hover.png\\\';\\n      },\\n      "mouseout" : function() {\\n        this.src=\\\'/inlrn/static/images/inlrnlogo.png\\\';\\n      }\\n    }); \\n\\n    \', escape=False)\nif request.function==\'academies\':\n    response.write(\'\\n      $("#academies-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n    pass\nresponse.write(\'\\n    \', escape=False)\nif request.function==\'courses\':\n    response.write(\'\\n      $("#courses-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n    pass\nresponse.write(\'\\n    \', escape=False)\nif request.function==\'discover\':\n    response.write(\'\\n      $("#discover-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n    pass\nresponse.write(\'\\n    \', escape=False)\nif request.function==\'feed\':\n    response.write(\'\\n      $("#feed-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n    \', escape=False)\n    pass\nresponse.write(\'\\n\\n    $("#member-icon-area").hover(\\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n\\n      }, \\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n\\n      }\\n    );\\n    $("#member-name-area").hover(\\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'rgb(56,107,158)\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(255,255,255)\\\');\\n\\n      }, \\n      function() {\\n        $("#angle-down-icon").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n        $("#member-icon-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#member-name-area").css(\\\'background-color\\\',\\\'\\\');\\n        $("#username-area").css(\\\'color\\\',\\\'rgb(211,221,241)\\\');\\n\\n      }\\n    );\\n\\n\\n  </script>\\n  <!-- /inline-scripts -->\\n\\n  <!-- javascript ============================================= -->\\n  <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/bootstrap.min.js\'))\nresponse.write(\'"></script>\\n  <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/web2py_bootstrap.js\'))\nresponse.write(\'"></script>\\n  <script src="\', escape=False)\nresponse.write(URL(\'static\',\'js/analytics.min.js\'))\nresponse.write(\'"></script>\\n  <script type="text/javascript">\\n    analytics.initialize({\\n      \\\'Google Analytics\\\':{trackingId:\\\'UA-22491760-8\\\'} \\n    });\\n  </script>\\n  <!-- /javascript -->\\n\\n</body>\\n<!-- /body -->\\n\\n</html>\\n<!-- /html -->\', escape=False)'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.AttributeError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.AttributeError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.AttributeError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.AttributeError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.AttributeError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.AttributeError object>'
+p23
+sS'args'
+p24
+S'("\'Row\' object has no attribute \'id\'",)'
+p25
+sS'__reduce__'
+p26
+S'<built-in method __reduce__ of exceptions.AttributeError object>'
+p27
+sS'__str__'
+p28
+S"<method-wrapper '__str__' of exceptions.AttributeError object>"
+p29
+sS'__format__'
+p30
+S'<built-in method __format__ of exceptions.AttributeError object>'
+p31
+sS'__getattribute__'
+p32
+S"<method-wrapper '__getattribute__' of exceptions.AttributeError object>"
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.AttributeError'>"
+p35
+sS'__unicode__'
+p36
+S'<built-in method __unicode__ of exceptions.AttributeError object>'
+p37
+sS'__delattr__'
+p38
+S"<method-wrapper '__delattr__' of exceptions.AttributeError object>"
+p39
+sS'__subclasshook__'
+p40
+S'<built-in method __subclasshook__ of type object>'
+p41
+sS'__repr__'
+p42
+S"<method-wrapper '__repr__' of exceptions.AttributeError object>"
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.AttributeError object>'
+p47
+sS'__doc__'
+p48
+S"'Attribute not found.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.AttributeError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S"'Row' object has no attribute 'id'"
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S's4[\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">ajax</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">application</td><td style="vertical-align:top;">:</td><td><div>inlrn</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">args</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>jokerfeng2010</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cid</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">controller</td><td style="vertical-align:top;">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_admin</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-22f96d3b-a283-45ef-829d-fb2c814a51aa<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_inlrn</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_welcome</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-9056ebd6-82ca-4d02-999c-b27e54d7804a<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">env</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_ENCODING</td><td style="vertical-align:top;">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_ACCEPT_LANGUAGE</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CACHE_CONTROL</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_CONNECTION</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_COOKIE</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-9056ebd6-82ca-4d02-999c-b27e54d7804a; session_id_inlrn=127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912; __utma=96992031.1160929198.1396125778.1396146078.1396152071.5; __utmb=96992031.24.10.1396152071; __utmc=96992031; __utmz=96992031.1396125778.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); session_id_admin=127.0.0.1-22f96d3b-a283-45ef-829d-fb2c814a51aa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_HOST</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">HTTP_USER_AGENT</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">PATH_INFO</td><td style="vertical-align:top;">:</td><td><div>/inlrn/default/member/jokerfeng2010</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">QUERY_STRING</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_ADDR</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REMOTE_PORT</td><td style="vertical-align:top;">:</td><td><div>40472</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">REQUEST_METHOD</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SCRIPT_NAME</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_NAME</td><td style="vertical-align:top;">:</td><td><div>farm</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PORT</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_PROTOCOL</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">SERVER_SOFTWARE</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/john/Downloads/web2py/applications/admin/&#x27;, &#x27;/home/john/Downloads/web2py/applications/inlrn/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x1959758: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;farm&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: True, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/john/Downloads/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;FJqq1314&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept</td><td style="vertical-align:top;">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_encoding</td><td style="vertical-align:top;">:</td><td><div>gzip,deflate,sdch</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_accept_language</td><td style="vertical-align:top;">:</td><td><div>en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cache_control</td><td style="vertical-align:top;">:</td><td><div>max-age=0</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_connection</td><td style="vertical-align:top;">:</td><td><div>keep-alive</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_cookie</td><td style="vertical-align:top;">:</td><td><div>session_id_welcome=127.0.0.1-9056ebd6-82ca-4d02-999c-b27e54d7804a; session_id_inlrn=127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912; __utma=96992031.1160929198.1396125778.1396146078.1396152071.5; __utmb=96992031.24.10.1396152071; __utmc=96992031; __utmz=96992031.1396125778.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); session_id_admin=127.0.0.1-22f96d3b-a283-45ef-829d-fb2c814a51aa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_host</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1:8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">http_user_agent</td><td style="vertical-align:top;">:</td><td><div>Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.152 Safari/537.36</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>farm</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path_info</td><td style="vertical-align:top;">:</td><td><div>/inlrn/default/member/jokerfeng2010</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">query_string</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_addr</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remote_port</td><td style="vertical-align:top;">:</td><td><div>40472</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_method</td><td style="vertical-align:top;">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">request_uri</td><td style="vertical-align:top;">:</td><td><div>/inlrn/default/member/jokerfeng2010</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">script_name</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_name</td><td style="vertical-align:top;">:</td><td><div>farm</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_port</td><td style="vertical-align:top;">:</td><td><div>8000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_protocol</td><td style="vertical-align:top;">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">server_software</td><td style="vertical-align:top;">:</td><td><div>Rocket 1.2.6</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_path</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.9.5-stable+timestamp.2014.03.16.02.35.39</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7f3d74f2a1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x190d188&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7f3d647fc250&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi.version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_errors</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;&lt;stderr&gt;&#x27;, mode &#x27;w&#x27; at 0x7f3d74f2a1e0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_file_wrapper</td><td style="vertical-align:top;">:</td><td><div>&lt;class wsgiref.util.FileWrapper at 0x190d188&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_input</td><td style="vertical-align:top;">:</td><td><div>&lt;socket._fileobject object at 0x7f3d647fc250&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multiprocess</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_multithread</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_run_once</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_url_scheme</td><td style="vertical-align:top;">:</td><td><div>http</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi_version</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">extension</td><td style="vertical-align:top;">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">folder</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py/applications/inlrn/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">function</td><td style="vertical-align:top;">:</td><td><div>member</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">global_settings</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">app_folders</td><td style="vertical-align:top;">:</td><td><div>set([&#x27;/home/john/Downloads/web2py/applications/admin/&#x27;, &#x27;/home/john/Downloads/web2py/applications/inlrn/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">applications_parent</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_args</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cmd_options</td><td style="vertical-align:top;">:</td><td><div>&lt;Values at 0x1959758: {&#x27;verbose&#x27;: False, &#x27;ip&#x27;: &#x27;127.0.0.1&#x27;, &#x27;debuglevel&#x27;: 30, &#x27;with_scheduler&#x27;: False, &#x27;ips&#x27;: [&#x27;127.0.1.1&#x27;], &#x27;shutdown_timeout&#x27;: 5, &#x27;taskbar&#x27;: False, &#x27;with_coverage&#x27;: False, &#x27;port&#x27;: 8000, &#x27;maxthreads&#x27;: None, &#x27;softcron&#x27;: False, &#x27;server_name&#x27;: &#x27;farm&#x27;, &#x27;bpython&#x27;: False, &#x27;nogui&#x27;: True, &#x27;pid_filename&#x27;: &#x27;httpserver.pid&#x27;, &#x27;extcron&#x27;: False, &#x27;runcron&#x27;: False, &#x27;run_system_tests&#x27;: False, &#x27;test&#x27;: None, &#x27;folder&#x27;: &#x27;/home/john/Downloads/web2py&#x27;, &#x27;config&#x27;: &#x27;&#x27;, &#x27;minthreads&#x27;: None, &#x27;shell&#x27;: None, &#x27;run&#x27;: &#x27;&#x27;, &#x27;log_filename&#x27;: &#x27;httpserver.log&#x27;, &#x27;profiler_dir&#x27;: None, &#x27;args&#x27;: [&#x27;&#x27;], &#x27;socket_timeout&#x27;: 5, &#x27;ssl_ca_certificate&#x27;: None, &#x27;scheduler&#x27;: None, &#x27;interfaces&#x27;: None, &#x27;ssl_private_key&#x27;: &#x27;&#x27;, &#x27;scheduler_groups&#x27;: None, &#x27;password&#x27;: &#x27;FJqq1314&#x27;, &#x27;request_queue_size&#x27;: 5, &#x27;ssl_certificate&#x27;: &#x27;&#x27;, &#x27;cronjob&#x27;: False, &#x27;numthreads&#x27;: None, &#x27;quiet&#x27;: False, &#x27;import_models&#x27;: False, &#x27;timeout&#x27;: 10, &#x27;plain&#x27;: False, &#x27;nobanner&#x27;: False}&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">db_sessions</td><td style="vertical-align:top;">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">debugging</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">gluon_parent</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_jython</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_pypy</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_source</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">local_hosts</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>farm</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>127.0.1.1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>127.0.0.1</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">web2py_version</td><td style="vertical-align:top;">:</td><td><div>2.9.5-stable+timestamp.2014.03.16.02.35.39</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_https</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_local</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">is_restful</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">now</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2014, 3, 30, 1, 7, 8, 736102)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_args</td><td style="vertical-align:top;">:</td><td><div>jokerfeng2010</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">raw_extension</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">url</td><td style="vertical-align:top;">:</td><td><div>/inlrn/default/member/jokerfeng2010</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">utcnow</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2014, 3, 30, 5, 7, 8, 736141)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">uuid</td><td style="vertical-align:top;">:</td><td><div>inlrn/127.0.0.1.2014-03-30.01-07-08.979948c3-7e30-4c05-bbd3-8d31c19eb44c</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">wsgi</td><td style="vertical-align:top;">:</td><td><div>&lt;gluon.main.LazyWSGI object at 0x7f3d643dec50&gt;</div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'/home/john/Downloads/web2py/gluon/restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+S'environment'
+p66
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}"
+p67
+sS'ccode'
+p68
+S'<code object <module> at 0x7f3d643a9cb0, file "/...cations/inlrn/views/default/member.html", line 1>'
+p69
+ssS'lnum'
+p70
+I220
+sS'lines'
+p71
+(dp72
+I224
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p73
+sI215
+S'    try:'
+p74
+sI216
+S'        if isinstance(code, types.CodeType):'
+p75
+sI217
+S'            ccode = code'
+p76
+sI218
+S'        else:'
+p77
+sI219
+S'            ccode = compile2(code, layer)'
+p78
+sI220
+S'        exec ccode in environment'
+p79
+sI221
+S'    except HTTP:'
+p80
+sI222
+S'        raise'
+p81
+sI223
+S'    except RestrictedError:'
+p82
+ssS'call'
+p83
+S'(code=r"response.write(\'<!-- html ======================...dy -->\\n\\n</html>\\n<!-- /html -->\', escape=False)", environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, \'CAT\': <class \'gluon.html.CAT\'>, \'CENTER\': <class \'gluon.html.CENTER\'>, ...}, layer=\'/home/john/Downloads/web2py/applications/inlrn/views/default/member.html\')'
+p84
+sS'func'
+p85
+S'restricted'
+p86
+sa(dp87
+g62
+S'/home/john/Downloads/web2py/applications/inlrn/views/default/member.html'
+p88
+sg64
+(dp89
+S'a'
+S'undefined'
+p90
+sS'style'
+p91
+g90
+sS'h4'
+p92
+g90
+sS'builtinlen'
+p93
+S'<built-in function len>'
+p94
+sS'courses'
+p95
+S'<Rows (2)>'
+p96
+sS'toggle'
+p97
+g90
+sS'href'
+p98
+g90
+sS'div'
+p99
+g90
+sS'data'
+p100
+g90
+ssg70
+I77
+sg71
+(dp101
+I68
+S"            response.write(' \\n            \\tthis is yer account!!!!\\n                                         \\n            ', escape=False)"
+p102
+sI69
+S'        else:'
+p103
+sI70
+S"            response.write('\\n                not yer account!!!\\n               \\n            ', escape=False)"
+p104
+sI71
+S'            pass'
+p105
+sI72
+S"        response.write('\\n        ', escape=False)"
+p106
+sI73
+S'        pass'
+p107
+sI74
+S'    response.write(\'\\n\\n\\t</div>\\n\\t\\n    <div>      \\n      \\n\\t\\t<!--your most recent post or share on your profile is your status-->\\n        <p class="lead" style="margin-left:30px;">status</p>\\n\\t\\t<hr>\\n\\t\\t<br>\\n    </div>\\n    \\n\\n\\n    <ul class="nav nav-tabs" id="profile-tab" data-tabs="tabs" style="padding-left:15px">\\n        <li class="active"><a href="#user-feed" data-toggle="tab">feed</a></li>\\n        <li><a href="#user-content" data-toggle="tab">content</a></li>\\n        <li><a href="#user-info" data-toggle="tab">info</a></li>\\n\\t</ul>\\n \\n    <div class="tab-content" style="margin-left:30px;">\\n    <div class="tab-pane active" id="user-feed">\\n    \\n    \\t<!--if permission to post on feed-->\\n           \\n        <div id="input-options" style="background-color:rgb(220,220,220);">\\n            <div class="dropdown" style="float:left;margin-right:10px;">\\n                <a data-toggle="modal" href="#format-editor-modal" onclick="selection()">format</a>\\n            </div>\\n            <div style="float:left;margin-right:10px;">  \\n                <a class="" data-toggle="modal" href="#insert-editor-modal">insert</a>                          \\n            </div>\\n            <div class="dropdown" style="float:left;margin-right:10px;">\\n                <a class="dropdown-toggle" data-toggle="dropdown" href="#">view<b style="margin-right:5px;"class="caret"></b></a>\\n                <ul class="dropdown-menu">\\n                    <li><a onclick="set_editor_view(\\\'ShowBlocks\\\')">blocks</a></li>\\n\\t\\t\\t\\t\\t<li><a onclick="set_editor_view(\\\'Maximize\\\')">fullscreen</a></li>\\n                    <li><a onclick="set_editor_view(\\\'Source\\\')">source</a></li>\\n                </ul>\\n            </div>\\n        </div>\\n        <br>\\n        \\n       \\n\\n    \\t<!--pass-->\\n            \\n        <div id="member-feed">\\n            <div style="float:left;" id="member-feed-inside">\\n                <ul> \\n\\n\\n                    \', escape=False)'
+p108
+sI75
+S'    for course in courses:'
+p109
+sI76
+S"        response.write('\\n                    <li>\\n                    ', escape=False)"
+p110
+sI77
+S"        response.write(course['id'])"
+p111
+sI78
+S"        response.write('\\n                    </li>\\n                    ', escape=False)"
+p112
+sI79
+S'        pass'
+p113
+sI80
+S'    response.write(\'\\n                </ul>\\n            \\n            </div>      \\n            \\n        </div>\\n        \\n    </div>\\n    \\n    <div class="tab-pane" id="user-content">\\n    <div style="margin-left:15px;" id="user-content-content">\\n\\n    \\n    <ul class="nav nav-tabs" id="user-content-tab" data-tabs="tabs">\\n        <li class="active"><a href="#user-collections" data-toggle="tab">collections</a></li>\\n        <li><a href="#user-threads" data-toggle="tab">threads</a></li>\\n        <li><a href="#user-comments" data-toggle="tab">comments</a></li>\\n\\t</ul>\\n    \\n    <div class="tab-content">\\n    \\t<div class="tab-pane active" id="user-collections">collections</div>\\n    \\t<div class="tab-pane" id="user-threads">\\n    \\t\\n            <div style="float:left;" id="thread-tag-list-\', escape=False)'
+p114
+sI81
+S'    response.write(request.args(0))'
+p115
+sI82
+S'    response.write(\'">\\n                <h4>tags</h4>\\n                <br>\', escape=False)'
+p116
+sI83
+S'    for x in range(50):'
+p117
+sI84
+S"        response.write('\\n                \\t', escape=False)"
+p118
+sI85
+S'        response.write(x)'
+p119
+sI86
+S"        response.write('<br>\\n                ', escape=False)"
+p120
+sI87
+S'        pass'
+p121
+ssg83
+S'()'
+p122
+sg85
+S'<module>'
+p123
+sa(dp124
+g62
+S'/home/john/Downloads/web2py/gluon/dal.py'
+p125
+sg64
+(dp126
+S'ae'
+p127
+S'AttributeError("\'Row\' object has no attribute \'id\'",)'
+p128
+ssg70
+I7343
+sg71
+(dp129
+I7338
+S'        except (KeyError,AttributeError,TypeError), ae:'
+p130
+sI7339
+S'            try:'
+p131
+sI7340
+S"                self[key] = ogetattr(self,'__get_lazy_reference__')(key)"
+p132
+sI7341
+S'                return self[key]'
+p133
+sI7342
+S'            except:'
+p134
+sI7343
+S'                raise ae'
+p135
+sI7344
+S''
+sI7345
+S'    __setitem__ = lambda self, key, value: setattr(self, str(key), value)'
+p136
+sI7346
+S''
+sI7347
+S'    __delitem__ = object.__delattr__'
+p137
+ssg83
+S"(self=<Row {'course': {'auth_user_id': None, 'descript... 'id': 1L, 'course_id': '1', 'join_time': None}}>, k='id')"
+p138
+sg85
+g20
+sasS'pyver'
+p139
+S'Python 2.7.5+: /usr/bin/python (prefix: /usr)'
+p140
+sS'session'
+p141
+g57
+(S's\x1e\n\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">auth</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">expiration</td><td style="vertical-align:top;">:</td><td><div>2592000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">hmac_key</td><td style="vertical-align:top;">:</td><td><div>c282b134-7c73-4311-a87b-767614b25e73</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_visit</td><td style="vertical-align:top;">:</td><td><div>datetime.datetime(2014, 3, 29, 22, 42, 32, 436325)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">remember</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">email</td><td style="vertical-align:top;">:</td><td><div>jiefeng.hopkins@gmail.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">first_name</td><td style="vertical-align:top;">:</td><td><div>Jie</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">id</td><td style="vertical-align:top;">:</td><td><div>1L</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_name</td><td style="vertical-align:top;">:</td><td><div>Feng</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_id</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">registration_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">reset_password_key</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">username</td><td style="vertical-align:top;">:</td><td><div>jokerfeng2010</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">user_groups</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_orderby</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">last_query</td><td style="vertical-align:top;">:</td><td><div>db.course_member.id&gt;0</div></td></tr></table></div>'
+tRp142
+sS'etype'
+p143
+S"<type 'exceptions.AttributeError'>"
+p144
+sS'date'
+p145
+S'Sun Mar 30 01:07:08 2014'
+p146
+sS'response'
+p147
+g57
+(S'sd\x1b\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top;">body</td><td style="vertical-align:top;">:</td><td><div>&lt;cStringIO.StringO object at 0x7f3d5c52ed50&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">cookies</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">session_id_inlrn</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912<table><tr><td style="font-weight:bold;vertical-align:top;">comment</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">domain</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">expires</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">httponly</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">max-age</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">path</td><td style="vertical-align:top;">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">secure</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">version</td><td style="vertical-align:top;">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">delimiters</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">files</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>/inlrn/static/js/jquery.js</div></td></tr><tr><td><div>/inlrn/static/css/calendar.css</div></td></tr><tr><td><div>/inlrn/static/js/calendar.js</div></td></tr><tr><td><div>/inlrn/static/js/web2py.js</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">flash</td><td style="vertical-align:top;">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generic_patterns</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>*</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">google_analytics_id</td><td style="vertical-align:top;">:</td><td><div>UA-22491760-8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">headers</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">X-Powered-By</td><td style="vertical-align:top;">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">menu</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">meta</td><td style="vertical-align:top;">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top;">author</td><td style="vertical-align:top;">:</td><td><div>Trevor Overman</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">description</td><td style="vertical-align:top;">:</td><td><div>the internet is learning</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">generator</td><td style="vertical-align:top;">:</td><td><div>transparent, crowdowned, and free learning platform</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">keywords</td><td style="vertical-align:top;">:</td><td><div>internet, learning, loving, evolution, transparent</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">models_to_run</td><td style="vertical-align:top;">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/member/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">postprocessing</td><td style="vertical-align:top;">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_client</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_compression_level</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_expires</td><td style="vertical-align:top;">:</td><td><div>2592000</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_cookie_key</td><td style="vertical-align:top;">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_data_name</td><td style="vertical-align:top;">:</td><td><div>session_data_inlrn</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_file</td><td style="vertical-align:top;">:</td><td><div>&lt;open file &#x27;/home/john/Downloads/web2py/applications/inlrn/sessions/127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912&#x27;, mode &#x27;rb+&#x27; at 0x7f3d6c297780&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_filename</td><td style="vertical-align:top;">:</td><td><div>/home/john/Downloads/web2py/applications/inlrn/sessions/127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_hash</td><td style="vertical-align:top;">:</td><td><div>0275b893c19a6a82a72c5e23730dd078</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id</td><td style="vertical-align:top;">:</td><td><div>127.0.0.1-fb4b2a65-ec35-4313-ba09-b111fad19912</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_id_name</td><td style="vertical-align:top;">:</td><td><div>session_id_inlrn</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_locked</td><td style="vertical-align:top;">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_masterapp</td><td style="vertical-align:top;">:</td><td><div>inlrn</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_new</td><td style="vertical-align:top;">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">session_storage_type</td><td style="vertical-align:top;">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">status</td><td style="vertical-align:top;">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">title</td><td style="vertical-align:top;">:</td><td><div>member</div></td></tr><tr><td style="font-weight:bold;vertical-align:top;">view</td><td style="vertical-align:top;">:</td><td><div>default/member.html</div></td></tr></table></div>'
+tRp148
+sS'locals'
+p149
+(dp150
+S'ae'
+p151
+S'AttributeError("\'Row\' object has no attribute \'id\'",)'
+p152
+sS'k'
+S"'id'"
+p153
+sS'm'
+S'None'
+p154
+sS'_extra'
+p155
+S'None'
+p156
+sS'key'
+p157
+S"'id'"
+p158
+sS'self'
+p159
+S"<Row {'course': {'auth_user_id': None, 'descript... 'id': 1L, 'course_id': '1', 'join_time': None}}>"
+p160
+sssS'traceback'
+p161
+S'Traceback (most recent call last):\n  File "/home/john/Downloads/web2py/gluon/restricted.py", line 220, in restricted\n    exec ccode in environment\n  File "/home/john/Downloads/web2py/applications/inlrn/views/default/member.html", line 77, in <module>\n    <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-courses">{{=len(courses)}}</a></h4></div>\n  File "/home/john/Downloads/web2py/gluon/dal.py", line 7343, in __getitem__\n    raise ae\nAttributeError: \'Row\' object has no attribute \'id\'\n'
+p162
+s.

@@ -1,0 +1,182 @@
+timestamp: 2014-03-29T17:20:13.988830
+CREATE TABLE auth_user(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name CHAR(128),
+    last_name CHAR(128),
+    email CHAR(512),
+    username CHAR(128),
+    password CHAR(512),
+    registration_key CHAR(512),
+    reset_password_key CHAR(512),
+    registration_id CHAR(512)
+);
+success!
+timestamp: 2014-03-29T17:20:14.097125
+CREATE TABLE auth_group(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    role CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2014-03-29T17:20:14.199925
+CREATE TABLE auth_membership(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE
+);
+success!
+timestamp: 2014-03-29T17:20:14.313996
+CREATE TABLE auth_permission(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    group_id INTEGER REFERENCES auth_group (id) ON DELETE CASCADE,
+    name CHAR(512),
+    table_name CHAR(512),
+    record_id INTEGER
+);
+success!
+timestamp: 2014-03-29T17:20:14.446812
+CREATE TABLE auth_event(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    time_stamp TIMESTAMP,
+    client_ip CHAR(512),
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    origin CHAR(512),
+    description TEXT
+);
+success!
+timestamp: 2014-03-29T17:20:14.625867
+CREATE TABLE auth_cas(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER REFERENCES auth_user (id) ON DELETE CASCADE,
+    created_on TIMESTAMP,
+    service CHAR(512),
+    ticket CHAR(512),
+    renew CHAR(1)
+);
+success!
+timestamp: 2014-03-29T17:20:14.794453
+CREATE TABLE academy(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    url_title CHAR(512),
+    title CHAR(512),
+    description CHAR(512)
+);
+success!
+timestamp: 2014-03-29T17:20:14.916039
+CREATE TABLE academy_tag(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    academy_id INTEGER,
+    tag CHAR(512)
+);
+success!
+timestamp: 2014-03-29T17:20:15.072215
+CREATE TABLE course(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    academy_id_array TEXT,
+    url_title CHAR(512),
+    title CHAR(512),
+    description CHAR(512)
+);
+success!
+timestamp: 2014-03-29T17:20:15.185674
+CREATE TABLE course_tag(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    academy_id INTEGER,
+    tag CHAR(512)
+);
+success!
+timestamp: 2014-03-29T17:20:15.297327
+CREATE TABLE thread(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    academy_course_id_array TEXT,
+    title CHAR(512),
+    thread_content TEXT
+);
+success!
+timestamp: 2014-03-29T17:20:15.419145
+CREATE TABLE thread_tag(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    academy_id INTEGER,
+    tag CHAR(512)
+);
+success!
+timestamp: 2014-03-29T22:41:44.932720
+CREATE TABLE course_member(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    auth_user_id CHAR(512),
+    course_id CHAR(512)
+);
+success!
+timestamp: 2014-03-29T23:58:53.535011
+ALTER TABLE course_member ADD join_time TIMESTAMP;
+success!
+timestamp: 2014-03-29T23:58:53.879120
+ALTER TABLE course ADD creator_id CHAR(512);
+success!
+timestamp: 2014-03-30T00:08:01.647439
+ALTER TABLE course_member ADD member_type CHAR(512);
+success!
+timestamp: 2014-03-30T01:02:08.137941
+ALTER TABLE course ADD auth_user_id CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

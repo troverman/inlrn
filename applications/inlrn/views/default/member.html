@@ -21,7 +21,18 @@
 
     
 }
-    
+.course_title{
+    size: 20px;
+    font-weight: bold;
+}
+.course_create{
+    size: 20px;
+    color: green;
+}
+.course_follow{
+    size: 20px;
+    color: red;
+}
 </style>
 
 
@@ -74,7 +85,7 @@ NONE
             
         <div style="overflow: hidden;">
     		<div style="float: left;"><h4>courses</h4></div>
-            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-courses">0</a></h4></div>
+            <div style="float: right;"><h4 style="margin-right:15px;"><a data-toggle="modal" href="#user-courses">{{=len(courses)}}</a></h4></div>
         </div><hr style="margin:0px;margin-left:-15px;"><br>
         
         <div id="courses-items-block">
@@ -173,7 +184,24 @@ NONE
     	<!--pass-->
             
         <div id="member-feed">
-                    
+            <div style="float:left;" id="member-feed-inside">
+                <ul> 
+
+                    {{for course in courses:}}
+                    <li>
+                    {{="He has "}}
+                    {{if course['course_member.member_type'] == '1':}}
+                    <span class="course_create">{{="created"}} </span>
+                    {{else:}}
+                    <span class="course_follow"> {{="followed"}} </span>
+                    {{pass}} 
+                    course
+                    <span class="course_title"> {{=course['course.title']}} </span>
+                    </li>
+                    {{pass}}
+                </ul>
+            
+            </div>      
             
         </div>
         
@@ -258,10 +286,6 @@ NONE
         {{if session.auth is None:}}
         	not logged in yo
 		{{elif auth.user.username == username_from_url:}}
-        	<p>edit avatar</p><br>    
-        	{{=form_create_avatar}}
-        	{{=form_edit_avatar}}<br>
-        	{{=user_avatar}}
         	<p>edit thumbnail</p><br>    
         {{else:}}
         	logged in and not ur account

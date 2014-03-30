@@ -132,18 +132,13 @@ def member():
 
     try:
         username_from_url = db(db.auth_user.username == request.args(0)).select()[0]['username']
-        id_from_url = db(db.auth_user.username == request.args(0)).select()[0]['id']
-        #courses_distributed = db(db.auth_user.id == db.course.creator_id).select()
-        #courses_distributed_num = len(courses_distributed)
-        courses = db(db.course_member.auth_user_id == id_from_url).select(join=db.course.on(db.course.id==db.course_member.course_id), orderby=db.course_member.join_time)
+        id_from_url = db(db.auth_user.username == request.args(0)).select()[0]['username']
         
     except IndexError:
         redirect(URL('members'))
     
     
-    return dict(username_from_url=username_from_url, 
-            courses = courses,
-            )
+    return dict(username_from_url=username_from_url)
     
 ################################
 ####members#####################
