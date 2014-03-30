@@ -38,8 +38,17 @@ def academy():
 def academies():
 
     academy_list = db(db.academy).select()
-   
-    return dict(academy_list=academy_list)
+    form = SQLFORM(db.academy)
+    if form.process().accepted:
+        response.flash='record inserted'
+    return dict(academy_list=academy_list, form = form)
+
+def academies_post():
+    form=SQLFORM(db.academy)
+    if form.accepts(request, formname=None):
+        return DIV("Message posted")
+    elif form.errors:
+        return TABLE(*[TR(k, v) for k, v in form.errors.items()])
 
 ################################
 ####account#####################
@@ -75,8 +84,21 @@ def course():
 def courses():
 
     course_list = db(db.course).select()
-   
-    return dict(course_list=course_list)            
+    academy_list=db(db.academy).select()
+
+    form = SQLFORM(db.course)
+    if form.process().accepted:
+        response.flash='record inserted'
+
+    return dict(course_list=course_list, academy_list=academy_list, form=form)            
+
+def courses_post():
+    form=SQLFORM(db.course)
+    if form.accepts(request, formname=None):
+        return DIV("Message posted")
+    elif form.errors:
+        return TABLE(*[TR(k, v) for k, v in form.errors.items()])
+     
 
 ################################
 ####discover####################
