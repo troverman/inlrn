@@ -55,10 +55,7 @@
     }
     #share-footer-container{margin-left:5%;margin-right:5%;}
 </style>
-<<<<<<< HEAD
-=======
 
->>>>>>> FETCH_HEAD
 <script>
 academies=[
 {{for a in academy_list:}}
@@ -67,15 +64,13 @@ academies=[
 {{pass}}
 ]
 </script>
-<<<<<<< HEAD
 <div id="index-header">
     <div id="index-header-container">
         <h1>courses</h1>
     </div>
 </div><br>
-=======
 
->>>>>>> FETCH_HEAD
+
 <div class="centered-width">
     <div id="left">
         {{for tag in course_tag_list:}}
@@ -84,12 +79,15 @@ academies=[
     </div>
     <div id="right">
         <button class="btn" data-toggle="modal" data-target="#newCourse">+ new course</button><br>
-<<<<<<< HEAD
-        {{for x in range(20):}}
-            <p class="lead">promoted post</p>
-        {{pass}}
-=======
->>>>>>> FETCH_HEAD
+        <div style="border:1px solid rgb(235,235,235);background-color:rgb(246,250,255);padding:15px;" id="ad_block">
+            <a class="close" id="close-ad" href="#">&times;</a>
+            <div id="promoted_list">
+                {{for thread in range(5):}}
+                    <a href="/thread/{{=thread}}"><h5>{{=thread}}</h5></a>
+                {{pass}}          
+            </div>
+        <br>
+        </div>
     </div>
 
     <!-- Modal -->
@@ -180,10 +178,6 @@ $(".modal-footer .btn").click(function(){
     location.reload();
 })
 </script>
-
-
-
-
 
 <br><br><br><br>
 

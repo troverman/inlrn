@@ -4,7 +4,7 @@
 	#another-div{margin-left:3%;margin-right:3%;}
 	#another-div-container{border-top:3px solid rgb(210,210,210);}
 	#discover-div{margin-left:3%;margin-right:3%;}
-	#discover-div-container{border-top:3px solid rgb(210,210,210);border-bottom:3px solid rgb(210,210,210);}
+	#discover-div-container{border-top:2px solid rgb(210,210,210);border-bottom:2px solid rgb(210,210,210);background-color:rgb(250,250,250);}
 	#index-header{
     background-color:rgb(247,247,247);
     border-bottom:1px solid rgb(225, 225, 225);
@@ -23,11 +23,13 @@
 </style>
 <div id="index-header">
     <div id="index-header-container">
-		<h1>the internet is learning</h1><hr>
+		<br><h1>the internet is learning</h1><hr>
     </div>
 </div>
 <br>
 <div class="centered-width">
+	<img style="width:500px;height:500px;" class="img-polaroid" src="/inlrn/static/images/noimage-icon.png"/>
+	<br><hr><br>
 	<p class="lead">what does that mean?</p>
 	<p class="lead">it means that with the internet, the ability the learn, create, and spead knowledge is becoming much easier.</p>
 	<p class="lead">anyone can become a teacher, anyone can choose to learn, and anyone can take advantage of this collaborative nature.</p>
@@ -35,9 +37,18 @@
 	<p class="lead">inlrn is a <a>crowd owned</a>, <a>opensource</a>, <a>transparent</a>, <a>givingfor supported</a>, <a>voetr enabled</a> learning platform.</p>
 	<p class="lead">get <a>paid</a>? education is valuable.</p>
 
-	<p>PICTURE</p>
-
+<br><br>
 </div>
+
+<table style="margin: auto;">
+	<tr>
+		<td style="padding:10%;"><p class="lead">revaluating education</p></td>
+		<td style="padding:10%;"><p class="lead">completly transparent</p></td>
+		<td style="padding:10%;"><p class="lead">learning for everyone</p></td>
+	</tr>
+</table>
+<br><br>
+
 <div id="discover-div-container">
 	<div id="discover-div">
 		<br>
@@ -52,7 +63,10 @@
 </div>
 
 
+<br><br>
+
 <div class="centered-width">
+	<h4>trending</h4><hr><br>
 	<table>
 		<tr>
 			{{for academy in academy_list:}}
@@ -71,6 +85,8 @@
 		</tr>
 	</table>
 
+	<br><br>
+
 	<div class="well">
 		<h3><a href="/feed/">feed</a></h3>
 	</div>
@@ -80,14 +96,19 @@
 	<p class="lead">valuating education, really.</p>
 	<p class="lead">nonprofit</p>
 
+	<br><br>
+
+
 </div>
 <div id="another-div-container">
 	<div id="another-div">
+		<br><br>
 		<p class="lead">transparency is key</p>
 		<p class="lead">teach a class, get paid</p>
 		<p class="lead">take a class, get paid</p>
 		<p class="lead">anyone can join or create an academy</p>
 		<p class="lead">anyone can join or create a course</p>
+		<br><br>
 	</div>
 </div>
 <div id="share-footer">

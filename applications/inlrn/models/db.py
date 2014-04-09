@@ -62,6 +62,33 @@ db.define_table('academy',
 
 )
 
+################################
+####academy_member##############
+################################  
+import datetime
+db.define_table('academy_member',
+    Field('member_id','string'),
+    Field('academy_id','string'),
+    Field('academy_membergroup_id_array','list:string'),
+    Field('join_time','datetime', default=datetime.datetime.utcnow()),
+)
+
+################################
+####academy_membergroup#########
+################################
+db.define_table('academy_membergroup',
+    Field('academy_id','integer'),
+    Field('title','string'),
+    Field('description','string'),
+)
+
+################################
+####academy_tag#################
+################################ 
+db.define_table('academy_tag',
+    Field('academy_id','string'),
+    Field('tag','string'),
+)
 
 ################################
 ####assignment##################
@@ -85,46 +112,34 @@ db.define_table('assignment_question',
 )
 
 ################################
-####course_member###############
-################################  
-import datetime
-db.define_table('course_member',
-    Field('auth_user_id','string'),
-    Field('course_id','string'),
-    Field('member_type','string'),
-    Field('join_time','datetime', default=datetime.datetime.utcnow()),
-)
-
-################################
-####course_member#####################
-################################  
-import datetime
-
-
-db.define_table('course_member',
-    Field('auth_user_id','string'),
-    Field('course_id','string'),
-    Field('member_type','string'),
-    Field('join_time','datetime', default=datetime.datetime.utcnow()),
-)
-
-################################
-####academy_tag#################
-################################ 
-db.define_table('academy_tag',
-    Field('academy_id','string'),
-    Field('tag','string'),
-)
-
-################################
 ####course######################
 ################################ 
 db.define_table('course',
     Field('academy_id_array','list:integer'),
-    Field('auth_user_id','string'),
+    Field('member_id','string'),
     Field('url_title','string'),
     Field('title','string'),
     Field('description','text')
+)
+
+################################
+####course_member###############
+################################  
+import datetime
+db.define_table('course_member',
+    Field('member_id','string'),
+    Field('course_id','string'),
+    Field('course_membergroup_id_array','list:string'),
+    Field('join_time','datetime', default=datetime.datetime.utcnow()),
+)
+
+################################
+####course_membergroup##########
+################################
+db.define_table('course_membergroup',
+    Field('course_id','integer'),
+    Field('title','string'),
+    Field('description','string'),
 )
 
 ################################
@@ -142,6 +157,14 @@ db.define_table('course_page',
     Field('course_id','string', readable=False, writable=False),
     Field('title','string'),
     Field('page_content','text'),
+)
+
+################################
+####html_block##################
+################################
+db.define_table('html_block',
+    Field('html_content','text'),
+    Field('html_type','string'),
 )
 
 ################################

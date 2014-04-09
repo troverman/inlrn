@@ -21,6 +21,7 @@ def academy():
 
         academy_courses = db(db.course.academy_id_array.contains(academy_id_from_url)).select()
 
+        academy_member_list = db(db.academy_member.academy_id == academy_id_from_url).select()
 
     except IndexError:
         redirect(URL('academies'))
@@ -30,6 +31,7 @@ def academy():
         academy_id_from_url=academy_id_from_url,
         academy_from_url=academy_from_url,
         academy_courses=academy_courses,
+        academy_member_list=academy_member_list,
     )
 
 ################################
@@ -38,26 +40,12 @@ def academy():
 def academies():
 
     academy_list = db(db.academy).select()
-<<<<<<< HEAD
     academy_tag_list = db(db.academy_tag).select()
    
     return dict(
         academy_list=academy_list,
         academy_tag_list=academy_tag_list,
     )
-=======
-    form = SQLFORM(db.academy)
-    if form.process().accepted:
-        response.flash='record inserted'
-    return dict(academy_list=academy_list, form = form)
-
-def academies_post():
-    form=SQLFORM(db.academy)
-    if form.accepts(request, formname=None):
-        return DIV("Message posted")
-    elif form.errors:
-        return TABLE(*[TR(k, v) for k, v in form.errors.items()])
->>>>>>> FETCH_HEAD
 
 ################################
 ####account#####################
@@ -117,6 +105,7 @@ def course():
         assignment_list = db(db.assignment.course_id == course_from_url['id']).select()
         page_list = db(db.course_page.course_id == course_from_url['id']).select()
 
+        course_member_list = db(db.course_member.course_id == course_from_url['id']).select()
 
     except IndexError:
         redirect(URL('courses'))
@@ -131,6 +120,7 @@ def course():
         assignment_from_url=assignment_from_url,
         create_new_page_form=create_new_page_form,
         page_list = page_list,
+        course_member_list=course_member_list,
 
     )
    
@@ -141,7 +131,6 @@ def course():
 def courses():
 
     course_list = db(db.course).select()
-<<<<<<< HEAD
     course_tag_list = db(db.course_tag).select()
     academy_list = db(db.academy).select().as_list() 
 
@@ -150,23 +139,7 @@ def courses():
         course_list=course_list,
         course_tag_list=course_tag_list,
     )            
-=======
-    academy_list=db(db.academy).select()
 
-    form = SQLFORM(db.course)
-    if form.process().accepted:
-        response.flash='record inserted'
-
-    return dict(course_list=course_list, academy_list=academy_list, form=form)            
-
-def courses_post():
-    form=SQLFORM(db.course)
-    if form.accepts(request, formname=None):
-        return DIV("Message posted")
-    elif form.errors:
-        return TABLE(*[TR(k, v) for k, v in form.errors.items()])
-     
->>>>>>> FETCH_HEAD
 
 ################################
 ####discover####################
@@ -237,19 +210,16 @@ def member():
         id_from_url = db(db.auth_user.username == request.args(0)).select()[0]['id']
         #courses_distributed = db(db.auth_user.id == db.course.creator_id).select()
         #courses_distributed_num = len(courses_distributed)
-<<<<<<< HEAD
-        courses = db(db.course_member.auth_user_id == id_from_url).select()
-=======
-        courses = db(db.course_member.auth_user_id == id_from_url).select(join=db.course.on(db.course.id==db.course_member.course_id), orderby=db.course_member.join_time)
->>>>>>> FETCH_HEAD
-        
+        courses = db(db.course_member.member_id == id_from_url).select()
+      
     except IndexError:
         redirect(URL('members'))
     
     
-    return dict(username_from_url=username_from_url, 
-            courses = courses,
-            )
+    return dict(
+        username_from_url=username_from_url, 
+        courses = courses,
+    )
     
 ################################
 ####members#####################
@@ -343,6 +313,76 @@ def courses_post():
         return DIV("Message posted")
     elif form.errors:
         return TABLE(*[TR(k, v) for k, v in form.errors.items()])
+
+
+
+
+################################
+####ajax_join_academy###########
+################################                     
+def ajax_join_academy():
+    academy_id = request.vars.itervalues()
+    for x in academy_id:
+        academy_id_trim = int(x)
+        
+    #LOGIC
+    db.academy_member.insert(member_id = auth.user_id, academy_id = academy_id_trim, academy_membergroup_id_array=1)
+    jquery = "jQuery('.flash').html('joined academy').slideDown().delay(1000).slideUp();"
+
+    #jquery += "$('#join-collection-%s').fadeToggle(100);" % collection_id_trim
+    #jquery += "$('#leave-collection-%s').delay(100).fadeToggle(400);" % collection_id_trim   
+    return jquery      
+    
+################################
+####ajax_leave_academy##########
+################################     
+def ajax_leave_academy():
+    academy_id = request.vars.itervalues()
+    for x in academy_id:
+        academy_id_trim = int(x)
+
+    #LOGIC
+    db((db.academy_member.member_id==auth.user_id) & (db.academy_member.collection_id==academy_id_trim)).delete()
+    jquery = "jQuery('.flash').html('left academy').slideDown().delay(1000).slideUp();"
+
+    #jquery += "$('#leave-collection-%s').fadeToggle(100);" % collection_id_trim
+    #jquery += "$('#join-collection-%s').delay(100).fadeToggle(400);" % collection_id_trim   
+    return jquery
+       
+
+################################
+####ajax_join_course############
+################################                     
+def ajax_join_course():
+    course_id = request.vars.itervalues()
+    for x in course_id:
+        course_id_trim = int(x)
+        
+    #LOGIC
+    db.course_member.insert(member_id = auth.user_id, course_id = course_id_trim, course_membergroup_id_array=1)
+    jquery = "jQuery('.flash').html('joined course').slideDown().delay(1000).slideUp();"
+
+    #jquery += "$('#join-collection-%s').fadeToggle(100);" % collection_id_trim
+    #jquery += "$('#leave-collection-%s').delay(100).fadeToggle(400);" % collection_id_trim   
+    return jquery      
+    
+################################
+####ajax_leave_course###########
+################################     
+def ajax_leave_course():
+    course_id = request.vars.itervalues()
+    for x in course_id:
+        course_id_trim = int(x)
+
+    #LOGIC
+    db((db.course_member.member_id==auth.user_id) & (db.course_member.collection_id==course_id_trim)).delete()
+    jquery = "jQuery('.flash').html('left course').slideDown().delay(1000).slideUp();"
+
+    #jquery += "$('#leave-collection-%s').fadeToggle(100);" % collection_id_trim
+    #jquery += "$('#join-collection-%s').delay(100).fadeToggle(400);" % collection_id_trim   
+    return jquery
+
+
 
             
 ################################################################

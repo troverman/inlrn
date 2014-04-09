@@ -57,14 +57,17 @@
         {{pass}}
     </div>
     <div id="right">
-<<<<<<< HEAD
         <button class="btn" data-toggle="modal" data-target="#newAcademy">+ new academy</button><br>
-        {{for x in range(20):}}
-            <p class="lead">promoted post</p>
-        {{pass}}
-=======
-    	<button class="btn" data-toggle="modal" data-target="#newAcademy">+ new academy</button><br>
->>>>>>> FETCH_HEAD
+        <div style="border:1px solid rgb(235,235,235);background-color:rgb(246,250,255);padding:15px;" id="ad_block">
+            <a class="close" id="close-ad" href="#">&times;</a>
+            <div id="promoted_list">
+                {{for thread in range(5):}}
+                    <a href="/thread/{{=thread}}"><h5>{{=thread}}</h5></a>
+                {{pass}}          
+            </div>
+        <br>
+        </div>
+
     </div>
 
     <!-- Modal -->
@@ -102,7 +105,7 @@ $("#add-button").click(function(){
 </script>
     <div id="contentwrapper">
         <div id="content">
-            <a>sort via trending, member count</a>
+            <a>sort via trending, member count</a><hr>
             {{for academy in academy_list:}}
             	<h3><a href="/academy/{{=academy['url_title']}}/">{{=academy['title']}}</a></h3>
                 {{=academy['description']}}

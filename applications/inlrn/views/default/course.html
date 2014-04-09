@@ -2,66 +2,54 @@
 <style>
     
     #contentwrapper{
-        
-            //float: left;
-            width: 100%;
-            
+        //float: left;
+        width: 100%;
     }    
                 
     #content { 
+        margin-left:6%;
         //display:inline;
         //padding-left:15px;
         //margin: 0 280px 0 180px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/    
     }
     
     #right { 
-    
-            float: right;
-            width: 255px;
-            border-left:1px solid rgb(238,238,238);
-            border-bottom:1px solid rgb(238,238,238);
-            padding-left:15px;
-            padding-right:15px;
-            padding-bottom:15px;
-    
-     
+        margin-right:6%;
+        float: right;
+        width: 255px;
+        border-left:1px solid rgb(238,238,238);
+        border-bottom:1px solid rgb(238,238,238);
+        padding-left:15px;
+        padding-right:15px;
+        padding-bottom:15px;
     }
     
     #left {
-        
-            float: left;
-            width: 175px;
-            border-right:1px solid rgb(238,238,238);
-            border-bottom:1px solid rgb(238,238,238);
-            padding-left:15px;
-            padding-bottom:15px;
-        
+        float: left;
+        width: 175px;
+        border-right:1px solid rgb(238,238,238);
+        border-bottom:1px solid rgb(238,238,238);
+        padding-left:15px;
+        padding-bottom:15px;
     }
      
 </style>
-<div id="left">
-    <h4><a href="/course/{{=course_from_url['url_title']}}/anouncements/">anouncements</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/assignments/">assignments</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/calendar/">calendar</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/dropbox/">dropbox</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/documents/">documents</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/members/">members</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/grades/">grades</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/moderation/">moderation</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/pages/">pages</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/settings/">settings</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/transparency/">transparency</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/threads/">threads</a></h4>
-    <h4><a href="/course/{{=course_from_url['url_title']}}/member-groups/">member groups</a></h4>
-</div>
 <div id="right">
     <br>
-	<button class="btn">join</button><br>
+
+
+    <div class="course-join" id="join-course-{{=course_from_url['id']}}" style="float:left;margin-right:10px;">
+        <form style="display:none"><input type="hidden" id="" name="join-{{=course_from_url['id']}}" value="{{=course_from_url['id']}}" /></form> 
+        <a onclick="ajax('/ajax_join_course/', ['join-{{=course_from_url['id']}}'], ':eval');">
+        <h5 class="btn">join</h5>      
+        </a>
+    </div>
+
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="ZWUTDEF3ECGRY">
-    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ZWUTDEF3ECGRY">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
 
 
@@ -72,23 +60,41 @@
     <p class="lead">sidebar stuff...</p>
     <p class="lead">sidebar stuff...</p>
     <hr>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
-    <p class="lead">promoted post</p>
+    <div style="border:1px solid rgb(235,235,235);background-color:rgb(246,250,255);padding:15px;" id="ad_block">
+        <a class="close" id="close-ad" href="#">&times;</a>
+        <div id="promoted_list">
+            {{for thread in range(5):}}
+                <a href="/thread/{{=thread}}"><h5>{{=thread}}</h5></a>
+            {{pass}}          
+        </div>
+    <br>
+    </div>
 
 
 </div>
 <div id="contentwrapper">
     <div id="content">
+        <div id="left">
+            <h4><a href="/course/{{=course_from_url['url_title']}}/anouncements/">anouncements</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/assignments/">assignments</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/calendar/">calendar</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/dropbox/">dropbox</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/documents/">documents</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/members/">members</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/grades/">grades</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/moderation/">moderation</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/pages/">pages</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/settings/">settings</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/transparency/">transparency</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/threads/">threads</a></h4>
+            <h4><a href="/course/{{=course_from_url['url_title']}}/member-groups/">member groups</a></h4>
+        </div>
 		<h3 style="display:inline-block;margin-left:15px;"><a href="/course/{{=course_from_url['url_title']}}/">{{=course_from_url['title']}}</a></h3><hr>
 
         {{if request.args(1) is None:}}
-            <h4 style="display:inline-block;margin-left:15px;">feed</h4>
+            {{for x in range(20):}}
+                <p class="lead">feed item {{=x}}</p>
+            {{pass}}
         {{pass}}
 
         {{if request.args(1) == 'assignments':}}
@@ -109,7 +115,15 @@
                 {{pass}}
             {{pass}}
         {{pass}}
-       {{if request.args(1) == 'transparency':}}
+
+        {{if request.args(1) == 'members':}}
+            <h4 style="display:inline-block;margin-left:15px;">members</h4><hr>
+            {{for member in course_member_list:}}
+                <h5><a>{{=member}}</a></h5>
+            {{pass}}
+        {{pass}}
+
+        {{if request.args(1) == 'transparency':}}
             <h4 style="display:inline-block;margin-left:15px;">transparency</h4><hr>
             <p class="lead">x donation went to y member</p>
             <p class="lead">x donation went to y member</p>
@@ -117,10 +131,12 @@
             <p class="lead">x donation went to y member</p>
 
         {{pass}}
+
         {{if request.args(1) == 'threads':}}
             <h4 style="display:inline-block;margin-left:15px;">threads</h4><hr>
             <a style="display:inline-block;margin-left:15px;" data-toggle="modal" href="#new-thread">+ new thread</a><hr>
         {{pass}}
+
         {{if request.args(1) == 'pages':}}
             <h4 style="display:inline-block;margin-left:15px;">pages</h4><hr>
             <a style="display:inline-block;margin-left:15px;" data-toggle="modal" href="#new-page">+ new page</a><hr>
@@ -128,6 +144,7 @@
                 <a style="display:inline-block;margin-left:15px;" class="lead" href="/course/{{=course_from_url['url_title']}}/page/{{=page['id']}}/">{{=page['title']}}</a><br>
             {{pass}}
         {{pass}}
+
         {{if request.args(1) == 'page':}}
             {{if request.args(2) is not None:}}
                 <h4 style="display:inline-block;margin-left:15px;">page title</h4><hr>

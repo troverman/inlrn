@@ -24,6 +24,8 @@
 </style>
 <div id="left">
     <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/certificates/">certificates</a></p>
+    <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/courses/">courses</a></p>
+
     <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/members/">members</a></p>
     <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/moderation/">moderation</a></p>
     <p class="lead"><a href="/academy/{{=academy_from_url[0]['url_title']}}/pages/">pages</a></p>
@@ -35,6 +37,14 @@
 <div id="right">
     <button class="btn">+ new course</button><br>
 	<button class="btn">+ new thread</button><br>
+
+    <div class="academy-join" id="join-academy-{{=academy_from_url[0]['id']}}" style="float:left;margin-right:10px;">
+        <form style="display:none"><input type="hidden" id="" name="join-{{=academy_from_url[0]['id']}}" value="{{=academy_from_url[0]['id']}}" /></form> 
+        <a onclick="ajax('/ajax_join_academy/', ['join-{{=academy_from_url[0]['id']}}'], ':eval');">
+        <h5 class="btn">join</h5>      
+        </a>
+    </div>
+
     <div id="donate">
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
@@ -51,7 +61,7 @@
 <div id="contentwrapper">
     <div id="content" style="margin-left:5%;margin-right:5%;">
       
-        <h1>{{=academy_from_url[0]['title']}}</h1><hr>
+        <h3><a href="/academy/{{=academy_from_url[0]['url_title']}}">{{=academy_from_url[0]['title']}}</a></h3><hr>
         <p class="lead">{{=academy_from_url[0]['description']}}</p>
 
         <h3>courses</h3><hr>
@@ -63,9 +73,16 @@
             <a href="/course/{{=thread['url_title']}}">{{=thread['title']}}</a><br>
         {{pass}}
         <br><br>
+        {{for x in range(30):}}
+            <p class="lead">feed item {{=x}}</p>
+        {{pass}}
+
+        {{for member in academy_member_list:}}
+            <a>{{=member}}</a>
+        {{pass}}
 
     </div>
 </div>
 
 
-
+<br><br><br><br>
