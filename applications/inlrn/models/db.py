@@ -47,6 +47,8 @@ mail.settings.login = 'username:password'
 auth.settings.registration_requires_verification = False
 auth.settings.registration_requires_approval = False
 auth.settings.reset_password_requires_verification = True
+auth.settings.login_url = URL(r=request, c="default",f='Login')
+
 
 ################################################################
 ####database_tables#############################################

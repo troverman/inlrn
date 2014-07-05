@@ -183,14 +183,14 @@
             <a href="/academies/"><i id="academies-icon" class="fa fa-th"></i></a>
             <a href="/feed/"><i id="feed-icon" class="fa fa-align-justify"></i></a>
           </div>
-          <div id="header-search" style="float:left;margin-left:20px;margin-top:23px;">
+          <!--<div id="header-search" style="float:left;margin-left:20px;margin-top:23px;">
             <div class="input-append">
               <input type="text">
               <div class="btn-group" style="margin-top:0px;margin-left:-6px;">
                 <button class="btn" tabindex="-1"><i class="icon-search"></i></button>
               </div>
             </div>
-          </div>
+          </div>-->
           {{if auth.is_logged_in():}}
             <ul id="member-name-area" class="nav pull-right nav_bar">
               <a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -234,6 +234,12 @@
               <a data-toggle="modal" href="#login-or-signup" id="login-area">login or signup</a>
             </ul>
           {{pass}}
+          <div id="search-bar" style="float:right;margin-right:30px;margin-top:19px;">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-search"></i></span>
+              <input class="span2" id="prependedInput" type="text" placeholder="search">
+            </div>    
+          </div>
         </div>
       </div>
     </div>

@@ -14,7 +14,6 @@ def about():
 ################################                    
 def academy():
     
-    #if 
     try:
         academy_from_url = db(db.academy.url_title == request.args(0)).select()
         academy_id_from_url = db(db.academy.url_title == request.args(0)).select()[0]['id']
@@ -399,6 +398,7 @@ def download():
 ################################
 ####call########################
 ################################ 
+@auth.requires_login()
 def call():
     return service()
 
@@ -408,3 +408,16 @@ def call():
 @auth.requires_signature()
 def data():
     return dict(form=crud())
+
+@service.xmlrpc
+def test_add(a,b):
+    number_sum = a+b
+    return a+b
+
+def Login():
+    return "Not logged in";
+
+
+
+
+
